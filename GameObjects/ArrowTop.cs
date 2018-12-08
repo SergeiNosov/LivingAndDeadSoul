@@ -31,7 +31,7 @@ namespace LivingAndDeadSoul.GameObjects
 
         }
 
-        public override void Update(GameTime gameTime, List<GameObject> views)
+        public override void Update(GameTime gameTime)
         {
 
         }

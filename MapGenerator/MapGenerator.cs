@@ -49,7 +49,7 @@ namespace LivingAndDeadSoul
                          "              \n" +
                          "              \n";
 
-            maps = new[] { ground, entries, stairs, arrow, InfoControll };
+            maps = new[] { InfoControll,ground, entries, stairs, arrow };
             playerEnter = new Vector2(1, 6);
         }
     }

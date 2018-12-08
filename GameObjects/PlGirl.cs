@@ -14,9 +14,9 @@ namespace LivingAndDeadSoul
         public int Width = 64;
         public int Height = 128;
         public bool IsSolid = true;
-
+       public List<GameObject> views;
         public bool moveRight = true;
-
+        public  bool SelectPl=true;
         private Animation animation;
         public PlGirl() {
           string[] textures = { "PlayerGirl/GirlIdle1",  "PlayerGirl/GirlRun1",  "PlayerGirl/GirlRun2",  "PlayerGirl/GirlRun3","PlayerGirl/GirlRun4"  };
@@ -44,6 +44,7 @@ namespace LivingAndDeadSoul
 
             DataTypeScene type = new DataTypeScene();
             animation.LoadContent(game, 0);
+           
         }
 
         public void AddPositionRight(GameTime gameTime)
@@ -73,7 +74,7 @@ namespace LivingAndDeadSoul
             position.Y -= 250 * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
 
-        public override void Update(GameTime gameTime,List<GameObject> views)
+        public override void Update(GameTime gameTime)
         {
             bool AllowRight = true;
             bool AllowLeft = true;
@@ -142,25 +143,25 @@ namespace LivingAndDeadSoul
 
             if (AllowDown && droping)
                Droping(gameTime);
-
-            if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight)
+           
+            if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight && SelectPl)
             {
                 AddPositionRight(gameTime);
                 animation.Move();
                 moveRight = true; 
             } else
-            if (Keyboard.GetState().IsKeyDown(Keys.A) && AllowLeft)
+                if (Keyboard.GetState().IsKeyDown(Keys.A) && AllowLeft && SelectPl)
             {
                 AddPositionLeft(gameTime);
                 animation.Move();
                 moveRight = false;
 
             } else
-            if (Keyboard.GetState().IsKeyDown(Keys.W) && AllowUP)
+                    if (Keyboard.GetState().IsKeyDown(Keys.W) && AllowUP && SelectPl)
             {
                 AddPositionUP(gameTime);
             } else
-            if (Keyboard.GetState().IsKeyDown(Keys.S) && AllowDown)
+                        if (Keyboard.GetState().IsKeyDown(Keys.S) && AllowDown && SelectPl)
             {
                AddPositionDown(gameTime);
             }
@@ -168,7 +169,7 @@ namespace LivingAndDeadSoul
             {
                 animation.Stop();
             }
-            animation.Update(gameTime, views);
+            animation.Update(gameTime);
         }
     }
 }
