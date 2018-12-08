@@ -40,6 +40,7 @@ namespace LivingAndDeadSoul.GameObjects
 
             DataTypeScene type = new DataTypeScene();
             // animation.LoadContent(game, 0);
+            game.Content.RootDirectory = "Content/Players";
             texture = game.Content.Load<Texture2D>(textureName);
         }
 

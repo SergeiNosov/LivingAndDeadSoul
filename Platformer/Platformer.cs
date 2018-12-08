@@ -28,15 +28,18 @@ namespace LivingAndDeadSoul
             var GhostEnter = playerEnter.Y;
             PlayerGhost.position = new Vector2((playerEnter.X * PlayerGhost.Size)-50, (GhostEnter * PlayerGhost.Size)-64);
 
-            views.Add(PlayerGhost);
-            views.Add(PlayerGirl);
+          
 
-            foreach(string map in mapGenerater.maps)
+
+            foreach (string map in mapGenerater.maps)
             {
                 MapView mapView = new MapView(map);
                 mapView.InitMap();
                 views.AddRange(mapView.MapObjects);
             }
+            views.Add(PlayerGhost);
+            views.Add(PlayerGirl);
+
             PlayerGirl.views = views;
             PlayerGhost.views = views;
         }
@@ -45,9 +48,9 @@ namespace LivingAndDeadSoul
             {
                 view.LoadContent(game, IdTypeMode);
             }
-
+         
         }
-        
+     
         public override void Update(GameTime gameTime)
         {
 

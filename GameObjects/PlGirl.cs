@@ -49,6 +49,7 @@ namespace LivingAndDeadSoul
         {
 
             DataTypeScene type = new DataTypeScene();
+            game.Content.RootDirectory = "Content/Players";
             animationHorisontal.LoadContent(game, 0);
             animationVertical.LoadContent(game, 0);
         }
