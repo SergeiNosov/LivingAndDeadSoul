@@ -10,23 +10,11 @@ namespace LivingAndDeadSoul
     {
         string WorldData;
         string[] WorldSpace;
-        public bool isPlayerG = false;
-        public  bool isPlayerM = false;
-        List<GameObject> MapObjects = new List<GameObject>();
+        Vector2 mapEnter;
+        public List<GameObject> MapObjects = new List<GameObject>();
   
-        public MapView(string worldString, string typePlayer="null")
+        public MapView(string worldString)
         {
-            switch(typePlayer)
-            {
-                case "PlG": {
-                        isPlayerG = true;
-                    }
-                    break;
-                case "PlM": {
-                        isPlayerM = true;
-                    } break;
-                case "null": {}break;
-            }
             WorldSpace = worldString.Split('\n');
             WorldData = worldString;
 
@@ -46,15 +34,16 @@ namespace LivingAndDeadSoul
 
                     switch(WorldSpace[i][j])
                     {
-                        case '#':{ //GROUND
-                                Ground ground = new Ground();
+                        case '#': //GROUND
+                            Ground ground = new Ground();
 
-                                ground.textureName = "ground";
-                                ground.position = new Vector2(j * ground.Size, i * ground.Size);
-                                Console.WriteLine("Object Info:"+ground.textureName+ " Position.x: " + ground.position.X + "Position.Y: " + ground.position.Y);
-                                MapObjects.Add(ground);
-
-                            }break;
+                            ground.textureName = "ground";
+                            ground.position = new Vector2(j * ground.Size, i * ground.Size);
+                            Console.WriteLine("Object Info:"+ground.textureName+ " Position.x: " + ground.position.X + "Position.Y: " + ground.position.Y);
+                            MapObjects.Add(ground);
+                            break;
+                            
+                        /* 
                         case 'G':
                             { //GROUND
                                 PlGirl PlayerGirl = new PlGirl();
@@ -90,6 +79,7 @@ namespace LivingAndDeadSoul
                             }
                             break;
 
+                        */
                     }
 
                 }
@@ -113,19 +103,8 @@ namespace LivingAndDeadSoul
         {
             foreach (GameObject obj in MapObjects)
             {
-                obj.Draw(time,spriteBatch);
+                obj.Draw(time, spriteBatch);
             }
         }
-
-        public void RightDirection()
-        {
-            foreach (GameObject obj in MapObjects)
-            {
-                obj.RightDirection();
-            }
-        }
-      
-
-       
     }
 }

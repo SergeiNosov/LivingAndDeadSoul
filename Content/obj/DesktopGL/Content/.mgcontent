@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+<<<<<<< HEAD
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/City/ground.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
@@ -14,6 +15,11 @@
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/hint_E_off.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/hint_E_on.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
+=======
+    <File>E:/Temp/LivingAndDeadSoul/Content/City/ground.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/ground.png</File>
+>>>>>>> master
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
