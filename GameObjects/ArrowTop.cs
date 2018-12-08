@@ -10,9 +10,13 @@ namespace LivingAndDeadSoul.GameObjects
     {
         public int Size = 64;
         public bool IsSolid = true;
-
+        private float blinkTimer = 0f;
+        Random rand = new Random();
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if(blinkTimer > 0) {
+              return; 
+            }
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
             destinationRectangle = new Rectangle(x*Size, y*Size, 64, 64);
@@ -33,7 +37,11 @@ namespace LivingAndDeadSoul.GameObjects
 
         public override void Update(GameTime gameTime)
         {
-
+            if(blinkTimer <= 0 && (rand.Next(0, 100)> 98)) {
+                blinkTimer = 0.1f;
+            } else {
+                blinkTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
         }
     }
 }

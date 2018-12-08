@@ -4,7 +4,6 @@ using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System.Collections.Generic;
 
 namespace LivingAndDeadSoul
 {
@@ -16,18 +15,25 @@ namespace LivingAndDeadSoul
         public bool IsSolid = true;
        public List<GameObject> views;
         public bool moveRight = true;
+        public bool moveVertical = false;
+
+        private Animation animationHorisontal;
+        private Animation animationVertical;
         public  bool SelectPl=true;
         private Animation animation;
         public PlGirl() {
-          string[] textures = { "PlayerGirl/GirlIdle1",  "PlayerGirl/GirlRun1",  "PlayerGirl/GirlRun2",  "PlayerGirl/GirlRun3","PlayerGirl/GirlRun4"  };
-          animation = new Animation(textures);
+          string[] texturesHorisontal = { "PlayerGirl/GirlIdle1",  "PlayerGirl/GirlRun1",  "PlayerGirl/GirlRun2",  "PlayerGirl/GirlRun3", "PlayerGirl/GirlRun4" };
+          string[] texturesVertical = { "PlayerGirl/GirlClimbingStrairs1", "PlayerGirl/GirlClimbingStrairs2", "PlayerGirl/GirlClimbingStrairs1", "PlayerGirl/GirlClimbingStrairs2" };
+          animationHorisontal = new Animation(texturesHorisontal);
+          animationHorisontal.FrameSpeed = 0.15f;
+          animationVertical = new Animation(texturesVertical);
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
             destinationRectangle = new Rectangle(x - (Width - Size), y - (Height - Size), Width, Height);
-            Texture2D texture = animation.currentTexture;
+            Texture2D texture = moveVertical ? animationVertical.currentTexture : animationHorisontal.currentTexture;
             spriteBatch.Draw(
                 texture,
                 destinationRectangle,
@@ -43,8 +49,8 @@ namespace LivingAndDeadSoul
         {
 
             DataTypeScene type = new DataTypeScene();
-            animation.LoadContent(game, 0);
-           
+            animationHorisontal.LoadContent(game, 0);
+            animationVertical.LoadContent(game, 0);
         }
 
         public void AddPositionRight(GameTime gameTime)
@@ -147,29 +153,41 @@ namespace LivingAndDeadSoul
             if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight && SelectPl)
             {
                 AddPositionRight(gameTime);
-                animation.Move();
+                animationHorisontal.Move();
+                animationVertical.Stop();
                 moveRight = true; 
+                moveVertical = false;
             } else
                 if (Keyboard.GetState().IsKeyDown(Keys.A) && AllowLeft && SelectPl)
             {
                 AddPositionLeft(gameTime);
-                animation.Move();
+                animationHorisontal.Move();
+                animationVertical.Stop();
                 moveRight = false;
-
+                moveVertical = false;
             } else
                     if (Keyboard.GetState().IsKeyDown(Keys.W) && AllowUP && SelectPl)
             {
                 AddPositionUP(gameTime);
+                animationHorisontal.Stop();
+                animationVertical.Move();
+                moveVertical = true;
             } else
                         if (Keyboard.GetState().IsKeyDown(Keys.S) && AllowDown && SelectPl)
             {
                AddPositionDown(gameTime);
+               animationHorisontal.Stop();
+               animationVertical.Move();
+               moveVertical = true;
             }
             else
             {
-                animation.Stop();
+
+                animationHorisontal.Stop();
+                animationVertical.Stop();
             }
-            animation.Update(gameTime);
+            animationVertical.Update(gameTime, views);
+            animationHorisontal.Update(gameTime, views);
         }
     }
 }
