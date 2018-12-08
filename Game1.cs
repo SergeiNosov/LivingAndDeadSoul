@@ -10,69 +10,28 @@ namespace LivingAndDeadSoul
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        List<MapView> views = new List<MapView>();
-        int IdTypeMode=1;
-     
+        GameEntity activeEntity;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            views.Add(new MapView( //MAPS
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n"+
-                "\n" + 
-                "\n"+
-                "#############\n"
-
-        ));
-
-            views.Add(new MapView( //PlayerGirl
-            "\n" +
-            "\n" +
-            "\n" +
-            "\n" +
-            "\n" +
-            "\n" +
-            "   G\n" +
-            "\n"
-
-
-                                 
-              ,"PlG"
-
-           ));
-
-
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            foreach(MapView view in views)
-            {
-                view.InitMap();
-            }
-      
-
+            activeEntity = new Platformer();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            foreach (MapView view in views)
-            {
-                view.LoadContent(this,IdTypeMode);
-            }
             Content.RootDirectory = "Content/Players";
 
-
+            activeEntity.LoadContent(this);
             // TODO: use this.Content to load your game content here
         }
 
@@ -83,23 +42,7 @@ namespace LivingAndDeadSoul
             //проверяем стукаемся ли с объектом
 
             // TODO: Add your update logic here
-            if(Keyboard.GetState().IsKeyDown(Keys.D))
-            {
-                foreach (MapView view in views)
-                {
-                    if(view.isPlayerG)
-                    {
-                        //управление девочкой
-                        view.RightDirection();
-
-                    }
-                    if(view.isPlayerM)
-                    {
-                        //упарвление призраком
-                    }
-                
-                }
-            }
+            activeEntity.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -109,10 +52,7 @@ namespace LivingAndDeadSoul
       
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            foreach (MapView view in views)
-            {
-                view.Draw(gameTime, spriteBatch);
-            }
+            activeEntity.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
