@@ -18,18 +18,14 @@ namespace LivingAndDeadSoul
             
             PlayerGirl.textureName = "PlayerGirl";
             PlayerGirl.position = new Vector2(playerEnter.X * PlayerGirl.Size, playerEnter.Y * PlayerGirl.Size);
-            MapView mapView = new MapView(mapGenerater.map);
-            mapView.InitMap();
-            MapView EventObjects = new MapView(MapGenerator.Gen3());
-            EventObjects.InitMap();
-
-            MapView PusApObjects = new MapView(MapGenerator.Gen4());
-            PusApObjects.InitMap();
-
             views.Add(PlayerGirl);
-            views.AddRange(PusApObjects.MapObjects);
-            views.AddRange(mapView.MapObjects);
-            views.AddRange(EventObjects.MapObjects);
+
+            foreach(string map in mapGenerater.maps)
+            {
+                MapView mapView = new MapView(map);
+                mapView.InitMap();
+                views.AddRange(mapView.MapObjects);
+            }
 
 
         }
