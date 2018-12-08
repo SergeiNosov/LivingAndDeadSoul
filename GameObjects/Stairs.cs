@@ -8,13 +8,15 @@ namespace LivingAndDeadSoul.GameObjects
     public class Stairs:GameObject
     {
         public int Size = 64;
+        public int Width = 64;
+        public int Height = 64;
         public bool IsSolid = true;
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
-            Rectangle destinationRectangle = new Rectangle(x, y, 64, 64);
+            destinationRectangle = new Rectangle(x - (Width - Size), y - (Height - Size), Width, Height);
             spriteBatch.Draw(texture, destinationRectangle, Color.White);
 
 
