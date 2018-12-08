@@ -8,20 +8,25 @@ namespace LivingAndDeadSoul
     public class Platformer: GameEntity
     {
         int IdTypeMode=1;
-        List<MapView> views = new List<MapView>();
+        List<GameObject> views = new List<GameObject>();
+        PlGirl PlayerGirl = new PlGirl();
         public Platformer()
         {
-            views.Add(new MapView( MapGenerator.Gen()));
+            MapGenerator mapGenerater = new MapGenerator();
+            Vector2 playerEnter = mapGenerater.playerEnter;
 
-            views.Add(new MapView( MapGenerator.Gen2(), "PlG"));
+            
+            PlayerGirl.textureName = "PlayerGirl";
+            PlayerGirl.position = new Vector2(playerEnter.X * PlayerGirl.Size, playerEnter.Y * PlayerGirl.Size);
+            MapView mapView = new MapView(mapGenerater.map);
+            mapView.InitMap();
 
-            foreach(MapView view in views)
-            {
-                view.InitMap();
-            }
+            views.AddRange(mapView.MapObjects);
+            views.Add(PlayerGirl);
+
         }
         public override void LoadContent(Game game) {
-            foreach (MapView view in views)
+            foreach (GameObject view in views)
             {
                 view.LoadContent(game, IdTypeMode);
             }
@@ -29,28 +34,11 @@ namespace LivingAndDeadSoul
         
         public override void Update(GameTime gameTime)
         {
-            if(Keyboard.GetState().IsKeyDown(Keys.D))
-            {
-                foreach (MapView view in views)
-                {
-                    if(view.isPlayerG)
-                    {
-                        //управление девочкой
-                        view.RightDirection();
-
-                    }
-                    if(view.isPlayerM)
-                    {
-                        //упарвление призраком
-                    }
-                
-                }
-            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            foreach (MapView view in views)
+            foreach (GameObject view in views)
             {
                 view.Draw(gameTime, spriteBatch);
             }
