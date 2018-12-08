@@ -12,12 +12,13 @@ namespace LivingAndDeadSoul
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GameEntity activeEntity;
-
+  
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
+         
 
             IsMouseVisible = true;
     
@@ -33,13 +34,17 @@ namespace LivingAndDeadSoul
         {
             // TODO: Add your initialization logic here
             activeEntity = new Platformer();
+         
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
+       
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
             Content.RootDirectory = "Content/Players";
+     
 
             activeEntity.LoadContent(this);
             // TODO: use this.Content to load your game content here
@@ -59,9 +64,11 @@ namespace LivingAndDeadSoul
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-      
+           
             // TODO: Add your drawing code here
             spriteBatch.Begin();
+
+      
             activeEntity.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);

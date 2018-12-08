@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -67,21 +68,107 @@ namespace LivingAndDeadSoul
         {
             position.Y += 350 * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
-        override public void Update(GameTime gameTime){
+        public void Jump(GameTime gameTime)
+        {
+            position.Y -= 250 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.D))
+        public override void Update(GameTime gameTime,List<GameObject> views)
+        {
+            bool AllowRight = true;
+            bool AllowLeft = true;
+            bool AllowUP = false;
+            bool AllowDown = true;
+
+            bool droping = false;
+            foreach (GameObject view in views)
             {
-                 animation.Move();
-                 moveRight = true; 
-            } else if (Keyboard.GetState().IsKeyDown(Keys.A))
-            {
-                animation.Move();
-                moveRight = false;
-            } else {
-                animation.Stop();
+                if (view.textureName == "stairs")
+                {
+                    Rectangle rectRange = view.destinationRectangle;
+                    rectRange.Width = -32;
+                    rectRange.X += 40;
+                    if (rectRange.Intersects(destinationRectangle))
+                    {
+
+                        AllowUP = true;
+                        AllowDown = true;
+
+                        foreach (GameObject view2 in views)
+                        {
+                            if (view2.textureName == "ground")
+                            {
+                                if (view2.destinationRectangle.Intersects(destinationRectangle))
+                                {
+                                    AllowDown = false;
+
+                                }
+                            }
+                        }
+                        droping = false;
+                        break;
+                    }
+                    else
+                    {
+                        droping = true;
+                        foreach (GameObject view2 in views)
+                        {
+                            if (view2.textureName == "ground")
+                            {
+                                if (!view2.destinationRectangle.Intersects(destinationRectangle))
+                                {
+                                    droping = true;
+                                }
+                                else
+                                {
+                                    droping = false;
+                                    AllowDown = false;
+                                }
+                            }
+                        }
+
+
+
+
+
+
+                    }
+
+                }
+
+
             }
 
-            animation.Update(gameTime);
+
+            if (AllowDown && droping)
+               Droping(gameTime);
+
+            if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight)
+            {
+                AddPositionRight(gameTime);
+                animation.Move();
+                moveRight = true; 
+            } else
+            if (Keyboard.GetState().IsKeyDown(Keys.A) && AllowLeft)
+            {
+                AddPositionLeft(gameTime);
+                animation.Move();
+                moveRight = false;
+
+            } else
+            if (Keyboard.GetState().IsKeyDown(Keys.W) && AllowUP)
+            {
+                AddPositionUP(gameTime);
+            } else
+            if (Keyboard.GetState().IsKeyDown(Keys.S) && AllowDown)
+            {
+               AddPositionDown(gameTime);
+            }
+            else
+            {
+                animation.Stop();
+            }
+            animation.Update(gameTime, views);
         }
     }
 }

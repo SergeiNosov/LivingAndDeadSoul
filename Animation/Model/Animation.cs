@@ -28,7 +28,7 @@ namespace LivingAndDeadSoul
             }
             currentTexture = textures[0];
         }
-        public override void Update(GameTime gameTime){
+        public override void Update(GameTime gameTime, List<GameObject> view) {
             if(move) {
                 timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 

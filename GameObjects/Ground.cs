@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -28,7 +29,12 @@ namespace LivingAndDeadSoul.GameObjects
             texture = game.Content.Load<Texture2D>(textureName);
           
         }
-       
-        public override void Update(GameTime gameTime){}
+
+        public override void Update(GameTime gameTime, List<GameObject> views)
+        {
+            
+        }
+
+
     }
 }

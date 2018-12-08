@@ -4,16 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/Temp/LivingAndDeadSoul/Content/City/ground.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlIdle1.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun1.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun2.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun3.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun4.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/ground.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/City/ground.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ButtonOff.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ButtonOn.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ground.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/Hint2.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOff.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOn.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
