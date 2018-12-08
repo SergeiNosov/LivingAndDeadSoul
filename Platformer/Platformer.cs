@@ -36,6 +36,7 @@ namespace LivingAndDeadSoul
             {
                 view.LoadContent(game, IdTypeMode);
             }
+
         }
         
         public override void Update(GameTime gameTime)
