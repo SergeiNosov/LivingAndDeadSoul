@@ -35,7 +35,7 @@ namespace LivingAndDeadSoul.GameObjects
 
         }
 
-        public override void Update(GameTime gameTime, List<GameObject> views)
+        public override void Update(GameTime gameTime)
         {
             if(blinkTimer <= 0 && (rand.Next(0, 100)> 98)) {
                 blinkTimer = 0.1f;
