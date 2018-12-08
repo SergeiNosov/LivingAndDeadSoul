@@ -11,4 +11,12 @@
     <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.7.0.7"/>
     <PackageReference Include="JSON" Version="1.0.1"/>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="GameObjects\" />
+    <Folder Include="HelperClass\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="GameObjects\EmptyClass.cs" />
+  </ItemGroup>
 </Project>

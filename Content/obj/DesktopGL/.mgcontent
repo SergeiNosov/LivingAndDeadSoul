@@ -4,9 +4,20 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+<<<<<<< HEAD
     <File>E:/Temp/LivingAndDeadSoul/Content/bridg.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
+=======
+    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/City/ground.png</File>
+    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Shelter/ground.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+>>>>>>> master
   </DestFiles>
 </SourceFileCollection>
