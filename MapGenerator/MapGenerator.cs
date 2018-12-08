@@ -5,70 +5,43 @@ using Microsoft.Xna.Framework.Input;
 namespace LivingAndDeadSoul
 {
     public class MapGenerator {
-        public string map;
+        public string[] maps;
         public Vector2 playerEnter;
         public MapGenerator() {
-            map =  "              \n" +
-                   "              \n" +
-                   "              \n" +
-                   "              \n" +
-                   "              \n"+
-                   "              \n" + 
-                   "             F\n"+
-                   "##############\n";
+            string ground =  "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" + 
+                          "             F\n" +
+                          "##############\n";
+            string entries = "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" + 
+                          "S            F\n" +
+                          "              \n";
+            string stairs = "        ^     \n" +
+                            "        ^     \n" +
+                            "        ^     \n" +
+                            "        ^     \n" +
+                            "        ^     \n" +
+                            "        ^     \n" +
+                            "        ^     \n" +
+                            "              \n";
+            string arrow = "              \n" +
+                           "              \n" +
+                           "       !      \n" +
+                           "              \n" +
+                           "              \n" +
+                           "              \n" +
+                           "              \n" +
+                           "              \n";
+            maps = new[] { ground, entries, stairs, arrow };
             playerEnter = new Vector2(1, 6);
         }
-        public static string Gen() {
-            return "              \n" +
-                   "              \n" +
-                   "              \n" +
-                   "              \n" +
-                   "              \n"+
-                   "              \n" + 
-                   "S            F\n"+
-                   "##############\n";
-        }
-        public static string Gen2() {
-            return "\n" +
-                   "\n" +
-                   "\n" +
-                   "\n" +
-                   "\n" +
-                   "\n" +
-                   "   G\n" +
-                   "\n";
-        }
-
-        public static string Gen3()
-        {
-            return
-                "        ^\n" +
-                "        ^\n" +
-                "        ^\n" +
-                "        ^\n" +
-                "        ^\n" +
-                "        ^\n" +
-                "        ^\n" +
-                "\n";
-
-        }
-
-        public static string Gen4()
-        {
-            return
-    "         \n" +
-    "         \n" +
-    "       ! \n" +
-    "         \n" +
-    "         \n" +
-    "         \n" +
-    "         \n" +
-    "\n";
-
-        }
-
-
-
-
     }
 }
