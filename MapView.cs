@@ -89,6 +89,16 @@ namespace LivingAndDeadSoul
 
                             }
                             break;
+                        case 'A':
+                            { //Controll info
+                                ActionInfo ActionInfo = new ActionInfo();
+
+                                ActionInfo.textureName = "HintEOff";
+                                ActionInfo.position = new Vector2(j * ActionInfo.Size, i * ActionInfo.Size);
+                                MapObjects.Add(ActionInfo);
+
+                            }
+                            break;
 
 
                     }
