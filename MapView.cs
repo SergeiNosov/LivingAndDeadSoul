@@ -66,6 +66,30 @@ namespace LivingAndDeadSoul
 
                             }
                             break;
+                        case '^':
+                            { //GROUND
+                                Stairs stairs = new Stairs();
+
+                                stairs.textureName = "stairs";
+                                stairs.position = new Vector2(j * stairs.Size, i * stairs.Size);
+                                Console.WriteLine("Object Info:" + stairs.textureName + " Position.x: " + stairs.position.X + "Position.Y: " + stairs.position.Y);
+                                MapObjects.Add(stairs);
+
+                            }
+                            break;
+
+                        case '!':
+                            { //GROUND
+                                ArrowTop arrowTop = new ArrowTop();
+
+                                arrowTop.textureName = "ArrowTop";
+                                arrowTop.position = new Vector2(j * arrowTop.Size, i * arrowTop.Size);
+                                Console.WriteLine("Object Info:" + arrowTop.textureName + " Position.x: " + arrowTop.position.X + "Position.Y: " + arrowTop.position.Y);
+                                MapObjects.Add(arrowTop);
+
+                            }
+                            break;
+
                     }
 
                 }

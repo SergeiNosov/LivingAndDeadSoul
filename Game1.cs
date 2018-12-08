@@ -22,7 +22,7 @@ namespace LivingAndDeadSoul
             views.Add(new MapView( //MAPS
                 "\n" +
                 "\n" +
-                "\n" +
+        "       !\n" +
                 "\n" +
                 "\n"+
                 "\n" + 
@@ -30,6 +30,24 @@ namespace LivingAndDeadSoul
                 "#############\n"
 
         ));
+
+
+            views.Add(new MapView( //EventObjects
+    "        ^\n" +
+    "        ^\n" +
+    "        ^\n" +
+    "        ^\n" +
+    "        ^\n" +
+    "        ^\n" +
+    "        ^\n" +
+    "\n"
+
+
+
+
+
+   ));
+
 
             views.Add(new MapView( //PlayerGirl
             "\n" +
@@ -46,6 +64,10 @@ namespace LivingAndDeadSoul
               ,"PlG"
 
            ));
+
+
+
+         
 
 
         }
