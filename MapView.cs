@@ -68,7 +68,19 @@ namespace LivingAndDeadSoul
                             }
                             break;
 
-                   
+                        case '%':
+                            { //Controll info
+                                ControllDecoration ControllInfo = new ControllDecoration();
+
+                                ControllInfo.textureName = "Hint2";
+                                ControllInfo.position = new Vector2(j* ControllInfo.Size, i* ControllInfo.Size);
+                                Console.WriteLine("Object Info:" + ControllInfo.textureName + " Position.x: " + ControllInfo.position.X + "Position.Y: " + ControllInfo.position.Y);
+                                MapObjects.Add(ControllInfo);
+
+                            }
+                            break;
+
+
                     }
 
                 }

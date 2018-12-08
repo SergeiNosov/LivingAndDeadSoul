@@ -6,11 +6,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 namespace LivingAndDeadSoul.GameObjects
 {
-    public class Stairs:GameObject
+    public class ControllDecoration:GameObject
     {
         public int Size = 64;
-        public int Width = 64;
-        public int Height = 64;
+        public int Width = 258;
+        public int Height = 178;
         public bool IsSolid = true;
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

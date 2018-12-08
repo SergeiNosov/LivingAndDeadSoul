@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -13,7 +14,7 @@ namespace LivingAndDeadSoul
         public Rectangle destinationRectangle;
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         public abstract void LoadContent(Game  game, int idType);
-  
+        public abstract void Update(GameTime gameTime, List<GameObject> views);
     }
 
 

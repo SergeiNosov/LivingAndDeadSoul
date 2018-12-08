@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -30,5 +31,9 @@ namespace LivingAndDeadSoul.GameObjects
 
         }
 
+        public override void Update(GameTime gameTime, List<GameObject> views)
+        {
+
+        }
     }
 }
