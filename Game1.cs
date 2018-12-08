@@ -8,7 +8,9 @@ namespace LivingAndDeadSoul
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        Component[] components = {
+            new CutScene()
+        };
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -19,14 +21,20 @@ namespace LivingAndDeadSoul
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            foreach (Component component in components)
+            {
+                component.Initialize();
+            }
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            foreach (Component component in components)
+            {
+                component.LoadContent(this);
+            }
             // TODO: use this.Content to load your game content here
         }
 
