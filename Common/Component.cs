@@ -8,6 +8,7 @@ namespace LivingAndDeadSoul
        
         public abstract void Initialize();
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
+        public abstract void Update(GameTime gameTime);
         public abstract void LoadContent(Game game);
     }
 }

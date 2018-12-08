@@ -5,10 +5,8 @@
   <Config />
   <SourceFiles>
     <File>E:/Temp/LivingAndDeadSoul/Content/bridg.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/CutScenes/Intro/bridg.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
