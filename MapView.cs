@@ -38,7 +38,7 @@ namespace LivingAndDeadSoul
                             Ground ground = new Ground();
 
                             ground.textureName = "ground";
-                            ground.position = new Vector2(j * ground.Size, i * ground.Size);
+                            ground.position = new Vector2(j, i);
                             Console.WriteLine("Object Info:"+ground.textureName+ " Position.x: " + ground.position.X + "Position.Y: " + ground.position.Y);
                             MapObjects.Add(ground);
                             break;
@@ -49,7 +49,7 @@ namespace LivingAndDeadSoul
                                 Stairs stairs = new Stairs();
 
                                 stairs.textureName = "stairs";
-                                stairs.position = new Vector2(j * stairs.Size, i * stairs.Size);
+                                stairs.position = new Vector2(j*stairs.Size, i*stairs.Size);
                                 Console.WriteLine("Object Info:" + stairs.textureName + " Position.x: " + stairs.position.X + "Position.Y: " + stairs.position.Y);
                                 MapObjects.Add(stairs);
 
@@ -61,7 +61,7 @@ namespace LivingAndDeadSoul
                                 ArrowTop arrowTop = new ArrowTop();
 
                                 arrowTop.textureName = "ArrowTop";
-                                arrowTop.position = new Vector2(j * arrowTop.Size, i * arrowTop.Size);
+                                arrowTop.position = new Vector2(j, i);
                                 Console.WriteLine("Object Info:" + arrowTop.textureName + " Position.x: " + arrowTop.position.X + "Position.Y: " + arrowTop.position.Y);
                                 MapObjects.Add(arrowTop);
 
