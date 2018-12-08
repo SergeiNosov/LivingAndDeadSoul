@@ -4,6 +4,7 @@ using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace LivingAndDeadSoul
 {
@@ -13,32 +14,41 @@ namespace LivingAndDeadSoul
         public int Width = 64;
         public int Height = 128;
         public bool IsSolid = true;
-       
+
+        public bool moveRight = true;
+
+        private Animation animation;
         public PlGirl() {
-           
+          string[] textures = { "PlayerGirl/GirlIdle1",  "PlayerGirl/GirlRun1",  "PlayerGirl/GirlRun2",  "PlayerGirl/GirlRun3","PlayerGirl/GirlRun4"  };
+          animation = new Animation(textures);
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
             destinationRectangle = new Rectangle(x - (Width - Size), y - (Height - Size), Width, Height);
-            spriteBatch.Draw(texture, destinationRectangle, Color.White);
+            Texture2D texture = animation.currentTexture;
+            spriteBatch.Draw(
+                texture,
+                destinationRectangle,
+                null,
+                Color.White,
+                0,
+                Vector2.One,
+                moveRight ? SpriteEffects.FlipHorizontally : SpriteEffects.None,
+                0);
+
         }
         public override void LoadContent(Game game, int idType)
         {
 
             DataTypeScene type = new DataTypeScene();
-            if(textureName!="PlayerGirl"&&textureName!="PlayerMan")
-            game.Content.RootDirectory = "Content/" + type.GetTypeMode(idType);
-            else {
-                game.Content.RootDirectory = "Content/Players";
-            }
-            texture = game.Content.Load<Texture2D>(textureName);
-
+            animation.LoadContent(game, 0);
         }
 
         public void AddPositionRight(GameTime gameTime)
         {
+           
             position.X += 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
         public void AddPositionLeft(GameTime gameTime)
@@ -136,24 +146,29 @@ namespace LivingAndDeadSoul
             if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight)
             {
                 AddPositionRight(gameTime);
-
-            }
+                animation.Move();
+                moveRight = true; 
+            } else
             if (Keyboard.GetState().IsKeyDown(Keys.A) && AllowLeft)
             {
                 AddPositionLeft(gameTime);
+                animation.Move();
+                moveRight = false;
 
-            }
+            } else
             if (Keyboard.GetState().IsKeyDown(Keys.W) && AllowUP)
             {
                 AddPositionUP(gameTime);
-            }
+            } else
             if (Keyboard.GetState().IsKeyDown(Keys.S) && AllowDown)
             {
                AddPositionDown(gameTime);
             }
-
-
+            else
+            {
+                animation.Stop();
+            }
+            animation.Update(gameTime, views);
         }
-
     }
 }
