@@ -14,7 +14,7 @@ namespace LivingAndDeadSoul.GameObjects
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
-            Rectangle destinationRectangle = new Rectangle(x, y, 64, 64);
+            destinationRectangle = new Rectangle(x*Size, y*Size, 64, 64);
             spriteBatch.Draw(texture, destinationRectangle, Color.White);
 
 

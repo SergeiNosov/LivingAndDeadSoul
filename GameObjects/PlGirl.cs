@@ -12,7 +12,7 @@ namespace LivingAndDeadSoul
         public int Width = 64;
         public int Height = 128;
         public bool IsSolid = true;
-        public Rectangle destinationRectangle;
+       
         public PlGirl() {
            
         }
@@ -35,7 +35,28 @@ namespace LivingAndDeadSoul
             texture = game.Content.Load<Texture2D>(textureName);
 
         }
-       
-       
+
+        public void AddPositionRight(GameTime gameTime)
+        {
+            position.X += 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+        public void AddPositionLeft(GameTime gameTime)
+        {
+            position.X -= 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+
+        public void AddPositionUP(GameTime gameTime)
+        {
+            position.Y -= 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+        public void AddPositionDown(GameTime gameTime)
+        {
+            position.Y += 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+        public void Droping(GameTime gameTime)
+        {
+            position.Y += 350 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+
     }
 }
