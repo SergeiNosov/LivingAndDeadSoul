@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlIdle1.png</SourceFile>
-  <SourceTime>2018-12-08T15:46:18.7378189+03:00</SourceTime>
+  <SourceTime>2018-12-08T21:50:18.6583776+03:00</SourceTime>
   <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Players/PlayerGirl/GirlIdle1.xnb</DestFile>
-  <DestTime>2018-12-08T17:11:02.3161233+03:00</DestTime>
+  <DestTime>2018-12-08T23:30:15.4337016+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-24T00:55:52+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

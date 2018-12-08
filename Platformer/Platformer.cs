@@ -42,7 +42,10 @@ namespace LivingAndDeadSoul
         public override void Update(GameTime gameTime)
         {
 
-            PlayerGirl.Update(gameTime, views);
+            foreach(GameObject view in views)
+            {
+                view.Update(gameTime, views);
+            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
