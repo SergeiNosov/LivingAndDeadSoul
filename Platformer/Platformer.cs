@@ -126,7 +126,7 @@ namespace LivingAndDeadSoul
                 PlayerGirl.AddPositionDown(gameTime);
             }
 
-
+            PlayerGirl.Update(gameTime);
 
         }
 

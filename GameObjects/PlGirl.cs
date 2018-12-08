@@ -16,14 +16,17 @@ namespace LivingAndDeadSoul
 
         public bool moveRight = true;
 
+        private Animation animation;
         public PlGirl() {
-           
+          string[] textures = { "PlayerGirl/GirlIdle1",  "PlayerGirl/GirlRun1",  "PlayerGirl/GirlRun2",  "PlayerGirl/GirlRun3","PlayerGirl/GirlRun4"  };
+          animation = new Animation(textures);
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
             destinationRectangle = new Rectangle(x - (Width - Size), y - (Height - Size), Width, Height);
+            Texture2D texture = animation.currentTexture;
             spriteBatch.Draw(
                 texture,
                 destinationRectangle,
@@ -39,19 +42,17 @@ namespace LivingAndDeadSoul
         {
 
             DataTypeScene type = new DataTypeScene();
-            game.Content.RootDirectory = "Content/Players/PlayerGirl";
-            texture = game.Content.Load<Texture2D>("GirlIdle1");
+            animation.LoadContent(game, 0);
         }
 
         public void AddPositionRight(GameTime gameTime)
         {
+           
             position.X += 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            moveRight = true; 
         }
         public void AddPositionLeft(GameTime gameTime)
         {
             position.X -= 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            moveRight = false;
         }
 
         public void AddPositionUP(GameTime gameTime)
@@ -66,6 +67,21 @@ namespace LivingAndDeadSoul
         {
             position.Y += 350 * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
-        override public void Update(GameTime gameTime){}
+        override public void Update(GameTime gameTime){
+
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+                 animation.Move();
+                 moveRight = true; 
+            } else if (Keyboard.GetState().IsKeyDown(Keys.A))
+            {
+                animation.Move();
+                moveRight = false;
+            } else {
+                animation.Stop();
+            }
+
+            animation.Update(gameTime);
+        }
     }
 }
