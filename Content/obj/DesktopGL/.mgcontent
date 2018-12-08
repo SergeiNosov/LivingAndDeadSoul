@@ -4,12 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/../../../../Library/Mobile Documents/com~apple~CloudDocs/textures/ground.png</File>
-    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/City/ground.png</File>
-    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/City/ground.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ground.png</File>
   </SourceFiles>
   <DestFiles>
-    <File>Shelter/ground.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
