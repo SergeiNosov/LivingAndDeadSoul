@@ -51,8 +51,12 @@ namespace LivingAndDeadSoul
         public override void Update(GameTime gameTime)
         {
 
-            PlayerGirl.Update(gameTime);
-            PlayerGhost.Update(gameTime);
+        
+            foreach(GameObject view in views)
+            {
+                view.Update(gameTime);
+            }
+
             if (Keyboard.GetState().IsKeyDown(Keys.Q) && LimitQ==false)
             {
                 LimitQ = true;

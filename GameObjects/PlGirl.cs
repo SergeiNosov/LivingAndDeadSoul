@@ -186,8 +186,8 @@ namespace LivingAndDeadSoul
                 animationHorisontal.Stop();
                 animationVertical.Stop();
             }
-            animationVertical.Update(gameTime, views);
-            animationHorisontal.Update(gameTime, views);
+            animationVertical.Update(gameTime);
+            animationHorisontal.Update(gameTime);
         }
     }
 }
