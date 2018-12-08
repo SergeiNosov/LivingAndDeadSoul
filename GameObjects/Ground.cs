@@ -9,9 +9,7 @@ namespace LivingAndDeadSoul.GameObjects
     {
         public int Size = 64;
         public bool IsSolid = true;
-        public Ground()
-        {
-        }
+   
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var x = Convert.ToInt32(position.X);

@@ -5,6 +5,18 @@
   <Config />
   <SourceFiles>
 <<<<<<< HEAD
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/City/ground.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/background.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/button_off.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/button_on.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ground.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/hint_E_off.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/hint_E_on.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
+=======
+<<<<<<< HEAD
     <File>E:/Temp/LivingAndDeadSoul/Content/bridg.png</File>
   </SourceFiles>
   <DestFiles>
@@ -13,11 +25,22 @@
     <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/City/ground.png</File>
     <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
     <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Shelter/ground.png</File>
+>>>>>>> master
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+<<<<<<< HEAD
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+=======
+>>>>>>> master
 >>>>>>> master
   </DestFiles>
 </SourceFileCollection>

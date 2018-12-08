@@ -18,7 +18,15 @@ namespace LivingAndDeadSoul
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
+
             IsMouseVisible = true;
+    
+
+
+
+
+            IsMouseVisible = true;
+
         }
 
         protected override void Initialize()
@@ -42,7 +50,7 @@ namespace LivingAndDeadSoul
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             //проверяем стукаемся ли с объектом
-
+         
             // TODO: Add your update logic here
             activeEntity.Update(gameTime);
             base.Update(gameTime);

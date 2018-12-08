@@ -43,19 +43,32 @@ namespace LivingAndDeadSoul
                             MapObjects.Add(ground);
                             break;
                             
-                        /* 
-                        case 'G':
-                            { //GROUND
-                                PlGirl PlayerGirl = new PlGirl();
+                     
+                        case '^':
+                            { //EventObjects
+                                Stairs stairs = new Stairs();
 
-                                PlayerGirl.textureName = "PlayerGirl";
-                                PlayerGirl.position = new Vector2(j * PlayerGirl.Size, i * PlayerGirl.Size);
-                                Console.WriteLine("Object Info:" + PlayerGirl.textureName +  " Position.x: " + PlayerGirl.position.X + "Position.Y: " + PlayerGirl.position.Y);
-                                MapObjects.Add(PlayerGirl);
+                                stairs.textureName = "stairs";
+                                stairs.position = new Vector2(j * stairs.Size, i * stairs.Size);
+                                Console.WriteLine("Object Info:" + stairs.textureName + " Position.x: " + stairs.position.X + "Position.Y: " + stairs.position.Y);
+                                MapObjects.Add(stairs);
 
                             }
                             break;
-                        */
+
+                        case '!':
+                            { //Pushaup
+                                ArrowTop arrowTop = new ArrowTop();
+
+                                arrowTop.textureName = "ArrowTop";
+                                arrowTop.position = new Vector2(j * arrowTop.Size, i * arrowTop.Size);
+                                Console.WriteLine("Object Info:" + arrowTop.textureName + " Position.x: " + arrowTop.position.X + "Position.Y: " + arrowTop.position.Y);
+                                MapObjects.Add(arrowTop);
+
+                            }
+                            break;
+
+                   
                     }
 
                 }
