@@ -35,10 +35,7 @@ namespace LivingAndDeadSoul
             texture = game.Content.Load<Texture2D>(textureName);
 
         }
-        public void AddPostitionRight()
-        {
-
-        }
+       
        
     }
 }

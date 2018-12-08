@@ -26,10 +26,11 @@ namespace LivingAndDeadSoul
             MapView PusApObjects = new MapView(MapGenerator.Gen4());
             PusApObjects.InitMap();
 
+            views.Add(PlayerGirl);
             views.AddRange(PusApObjects.MapObjects);
             views.AddRange(mapView.MapObjects);
             views.AddRange(EventObjects.MapObjects);
-            views.Add(PlayerGirl);
+
 
         }
         public override void LoadContent(Game game) {
@@ -41,9 +42,20 @@ namespace LivingAndDeadSoul
         
         public override void Update(GameTime gameTime)
         {
+
+
+
+
+
+
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-              //
+                PlayerGirl.AddPositionRight(gameTime);
+
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.A))
+            {
+                PlayerGirl.AddPositionLeft(gameTime);
 
             }
         }
