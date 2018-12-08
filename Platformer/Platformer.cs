@@ -11,28 +11,9 @@ namespace LivingAndDeadSoul
         List<MapView> views = new List<MapView>();
         public Platformer()
         {
-            views.Add(new MapView( //MAPS
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n"+
-                "\n" + 
-                "\n"+
-                "#############\n"
-            ));
+            views.Add(new MapView( MapGenerator.Gen()));
 
-            views.Add(new MapView( //PlayerGirl
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "   G\n" +
-                "\n"
-                ,"PlG"
-            ));
+            views.Add(new MapView( MapGenerator.Gen2(), "PlG"));
 
             foreach(MapView view in views)
             {
