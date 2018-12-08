@@ -3,6 +3,7 @@ using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace LivingAndDeadSoul
 {
@@ -11,6 +12,7 @@ namespace LivingAndDeadSoul
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GameEntity activeEntity;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
