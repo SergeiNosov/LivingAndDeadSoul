@@ -93,7 +93,7 @@ namespace LivingAndDeadSoul
                             { //Controll info
                                 ActionInfo ActionInfo = new ActionInfo();
 
-                                ActionInfo.textureName = "HintEOff";
+                                ActionInfo.textureName = "HintEon";
                                 ActionInfo.position = new Vector2(j * ActionInfo.Size, i * ActionInfo.Size);
                                 MapObjects.Add(ActionInfo);
 

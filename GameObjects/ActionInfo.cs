@@ -12,12 +12,12 @@ namespace LivingAndDeadSoul.GameObjects
         public int Width = 64;
         public int Height = 64;
         public bool IsSolid = true;
-        Texture2D texture2;
+   
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
-            destinationRectangle = new Rectangle((x - (Width - Size))-30, y - (Height - Size), Width, Height);
+            destinationRectangle = new Rectangle((x - (Width - Size))-40, (y - (Height - Size))-10, Width, Height);
             spriteBatch.Draw(texture, destinationRectangle, Color.White);
 
 
@@ -30,7 +30,7 @@ namespace LivingAndDeadSoul.GameObjects
             game.Content.RootDirectory = "Content/" + type.GetTypeMode(idType);
 
             texture = game.Content.Load<Texture2D>(textureName);
-            texture2 = game.Content.Load<Texture2D>("HintEon");
+   
 
         }
 
