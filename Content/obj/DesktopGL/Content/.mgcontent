@@ -22,9 +22,11 @@
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/Hint2.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOff.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOn.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/Light.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
