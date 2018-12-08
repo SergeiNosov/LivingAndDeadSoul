@@ -49,7 +49,7 @@ namespace LivingAndDeadSoul
                          "              \n" +
                          "              \n" +
                          "    %         \n" +
-                         "  A           \n" +
+                         "   A          \n" +
                          "              \n" +
                          "              \n";
 
