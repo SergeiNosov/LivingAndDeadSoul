@@ -3,12 +3,14 @@ using LivingAndDeadSoul.HelperClass;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace LivingAndDeadSoul
 {
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
+
         SpriteBatch spriteBatch;
         List<MapView> views = new List<MapView>();
         int IdTypeMode=1;
