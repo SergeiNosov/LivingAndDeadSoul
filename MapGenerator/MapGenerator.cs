@@ -8,7 +8,7 @@ namespace LivingAndDeadSoul
         public string[] maps;
         public Vector2 playerEnter;
         public MapGenerator() {
-            string ground =  "              \n" +
+           string ground ="              \n" +
                           "              \n" +
                           "              \n" +
                           "              \n" +
@@ -16,7 +16,7 @@ namespace LivingAndDeadSoul
                           "              \n" + 
                           "             F\n" +
                           "##############\n";
-            string entries = "              \n" +
+         string entries = "              \n" +
                           "              \n" +
                           "              \n" +
                           "              \n" +
@@ -24,23 +24,32 @@ namespace LivingAndDeadSoul
                           "              \n" + 
                           "S            F\n" +
                           "              \n";
-            string stairs = "        ^     \n" +
-                            "        ^     \n" +
-                            "        ^     \n" +
-                            "        ^     \n" +
-                            "        ^     \n" +
-                            "        ^     \n" +
-                            "        ^     \n" +
-                            "              \n";
-            string arrow = "              \n" +
-                           "              \n" +
-                           "       !      \n" +
-                           "              \n" +
-                           "              \n" +
-                           "              \n" +
-                           "              \n" +
-                           "              \n";
-            maps = new[] { ground, entries, stairs, arrow };
+          string stairs = "        ^     \n" +
+                          "        ^     \n" +
+                          "        ^     \n" +
+                          "        ^     \n" +
+                          "        ^     \n" +
+                          "        ^     \n" +
+                          "        ^     \n" +
+                          "              \n";
+           string arrow = "              \n" +
+                          "              \n" +
+                          "       !      \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n" +
+                          "              \n";
+   string InfoControll = "              \n" +
+                         "              \n" +
+                         "              \n" +
+                         "              \n" +
+                         "    %         \n" +
+                         "              \n" +
+                         "              \n" +
+                         "              \n";
+
+            maps = new[] { ground, entries, stairs, arrow, InfoControll };
             playerEnter = new Vector2(1, 6);
         }
     }

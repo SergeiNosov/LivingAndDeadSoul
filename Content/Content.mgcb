@@ -49,7 +49,7 @@
 /processorParam:TextureFormat=Color
 /build:Shelter/ArrowTop.png
 
-#begin Shelter/background.png
+#begin Shelter/ButtonOff.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -59,9 +59,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Shelter/background.png
+/build:Shelter/ButtonOff.png
 
-#begin Shelter/button_off.png
+#begin Shelter/ButtonOn.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -71,19 +71,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Shelter/button_off.png
-
-#begin Shelter/button_on.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Shelter/button_on.png
+/build:Shelter/ButtonOn.png
 
 #begin Shelter/ground.png
 /importer:TextureImporter
@@ -97,7 +85,7 @@
 /processorParam:TextureFormat=Color
 /build:Shelter/ground.png
 
-#begin Shelter/hint_E_off.png
+#begin Shelter/Hint2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -107,9 +95,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Shelter/hint_E_off.png
+/build:Shelter/Hint2.png
 
-#begin Shelter/hint_E_on.png
+#begin Shelter/HintEOff.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -119,7 +107,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Shelter/hint_E_on.png
+/build:Shelter/HintEOff.png
+
+#begin Shelter/HintEOn.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shelter/HintEOn.png
 
 #begin Shelter/stairs.png
 /importer:TextureImporter
