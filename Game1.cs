@@ -18,16 +18,7 @@ namespace LivingAndDeadSoul
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
-         
-
             IsMouseVisible = true;
-    
-
-
-
-
-            IsMouseVisible = true;
-
         }
 
         protected override void Initialize()
