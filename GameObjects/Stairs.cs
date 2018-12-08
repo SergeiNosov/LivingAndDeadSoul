@@ -29,6 +29,7 @@ namespace LivingAndDeadSoul.GameObjects
             texture = game.Content.Load<Texture2D>(textureName);
 
         }
+        public override void Update(GameTime gameTime){}
 
     }
 }

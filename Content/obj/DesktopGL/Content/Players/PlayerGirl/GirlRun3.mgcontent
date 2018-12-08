@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/Temp/LivingAndDeadSoul/Content/Shelter/hint_E_on.png</SourceFile>
-  <SourceTime>2018-12-08T14:20:19.2483689+03:00</SourceTime>
-  <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Shelter/hint_E_on.xnb</DestFile>
-  <DestTime>2018-12-08T14:20:36.2362474+03:00</DestTime>
+  <SourceFile>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun3.png</SourceFile>
+  <SourceTime>2018-12-08T15:46:18.9157089+03:00</SourceTime>
+  <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Players/PlayerGirl/GirlRun3.xnb</DestFile>
+  <DestTime>2018-12-08T16:47:24.0700901+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-08-05T14:17:44+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

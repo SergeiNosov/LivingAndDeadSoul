@@ -34,16 +34,11 @@ namespace LivingAndDeadSoul
             {
                 view.LoadContent(game, IdTypeMode);
             }
+
         }
         
         public override void Update(GameTime gameTime)
         {
-
-
-
-
-
-
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 PlayerGirl.AddPositionRight(gameTime);

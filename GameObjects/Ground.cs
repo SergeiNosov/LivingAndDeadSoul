@@ -29,6 +29,6 @@ namespace LivingAndDeadSoul.GameObjects
           
         }
        
-
+        public override void Update(GameTime gameTime){}
     }
 }

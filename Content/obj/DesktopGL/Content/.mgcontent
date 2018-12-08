@@ -6,16 +6,18 @@
   <SourceFiles>
     <File>E:/Temp/LivingAndDeadSoul/Content/City/ground.png</File>
     <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlIdle1.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun1.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun2.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun3.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun4.png</File>
+    <File>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlSpriteRun.png</File>
     <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/background.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/button_off.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/button_on.png</File>
     <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/ground.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/hint_E_off.png</File>
-    <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/hint_E_on.png</File>
     <File>E:/Temp/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
