@@ -4,9 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/City/ground.png</File>
-    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
-    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ground.png</File>
+    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/City/ground.png</File>
+    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Players/PlayerGirl.png</File>
+    <File>/Users/kristina/Projects/Living/LivingAndDeadSoul/Content/Shelter/ground.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
