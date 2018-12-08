@@ -43,20 +43,9 @@ namespace LivingAndDeadSoul
                             MapObjects.Add(ground);
                             break;
                             
-                        /* 
-                        case 'G':
-                            { //GROUND
-                                PlGirl PlayerGirl = new PlGirl();
-
-                                PlayerGirl.textureName = "PlayerGirl";
-                                PlayerGirl.position = new Vector2(j * PlayerGirl.Size, i * PlayerGirl.Size);
-                                Console.WriteLine("Object Info:" + PlayerGirl.textureName +  " Position.x: " + PlayerGirl.position.X + "Position.Y: " + PlayerGirl.position.Y);
-                                MapObjects.Add(PlayerGirl);
-
-                            }
-                            break;
+                     
                         case '^':
-                            { //GROUND
+                            { //EventObjects
                                 Stairs stairs = new Stairs();
 
                                 stairs.textureName = "stairs";
@@ -68,7 +57,7 @@ namespace LivingAndDeadSoul
                             break;
 
                         case '!':
-                            { //GROUND
+                            { //Pushaup
                                 ArrowTop arrowTop = new ArrowTop();
 
                                 arrowTop.textureName = "ArrowTop";
@@ -79,7 +68,7 @@ namespace LivingAndDeadSoul
                             }
                             break;
 
-                        */
+                   
                     }
 
                 }

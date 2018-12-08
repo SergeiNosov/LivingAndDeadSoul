@@ -18,62 +18,15 @@ namespace LivingAndDeadSoul
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
-<<<<<<< HEAD
+
             IsMouseVisible = true;
-            views.Add(new MapView( //MAPS
-                "\n" +
-                "\n" +
-        "       !\n" +
-                "\n" +
-                "\n"+
-                "\n" + 
-                "\n"+
-                "#############\n"
-
-        ));
-
-
-            views.Add(new MapView( //EventObjects
-    "        ^\n" +
-    "        ^\n" +
-    "        ^\n" +
-    "        ^\n" +
-    "        ^\n" +
-    "        ^\n" +
-    "        ^\n" +
-    "\n"
+    
 
 
 
 
-
-   ));
-
-
-            views.Add(new MapView( //PlayerGirl
-            "\n" +
-            "\n" +
-            "\n" +
-            "\n" +
-            "\n" +
-            "\n" +
-            "   G\n" +
-            "\n"
-
-
-                                 
-              ,"PlG"
-
-           ));
-
-
-
-         
-
-
-=======
             IsMouseVisible = true;
->>>>>>> master
+
         }
 
         protected override void Initialize()
@@ -97,7 +50,7 @@ namespace LivingAndDeadSoul
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             //проверяем стукаемся ли с объектом
-
+         
             // TODO: Add your update logic here
             activeEntity.Update(gameTime);
             base.Update(gameTime);

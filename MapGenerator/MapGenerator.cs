@@ -37,6 +37,38 @@ namespace LivingAndDeadSoul
                    "\n" +
                    "   G\n" +
                    "\n";
-        }  
+        }
+
+        public static string Gen3()
+        {
+            return
+                "        ^\n" +
+                "        ^\n" +
+                "        ^\n" +
+                "        ^\n" +
+                "        ^\n" +
+                "        ^\n" +
+                "        ^\n" +
+                "\n";
+
+        }
+
+        public static string Gen4()
+        {
+            return
+    "         \n" +
+    "         \n" +
+    "       ! \n" +
+    "         \n" +
+    "         \n" +
+    "         \n" +
+    "         \n" +
+    "\n";
+
+        }
+
+
+
+
     }
 }

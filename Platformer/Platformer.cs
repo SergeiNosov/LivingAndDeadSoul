@@ -20,8 +20,15 @@ namespace LivingAndDeadSoul
             PlayerGirl.position = new Vector2(playerEnter.X * PlayerGirl.Size, playerEnter.Y * PlayerGirl.Size);
             MapView mapView = new MapView(mapGenerater.map);
             mapView.InitMap();
+            MapView EventObjects = new MapView(MapGenerator.Gen3());
+            EventObjects.InitMap();
 
+            MapView PusApObjects = new MapView(MapGenerator.Gen4());
+            PusApObjects.InitMap();
+
+            views.AddRange(PusApObjects.MapObjects);
             views.AddRange(mapView.MapObjects);
+            views.AddRange(EventObjects.MapObjects);
             views.Add(PlayerGirl);
 
         }
@@ -34,6 +41,11 @@ namespace LivingAndDeadSoul
         
         public override void Update(GameTime gameTime)
         {
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+              //
+
+            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
