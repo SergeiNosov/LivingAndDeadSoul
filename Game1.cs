@@ -11,7 +11,7 @@ namespace LivingAndDeadSoul
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         List<MapView> views = new List<MapView>();
-        int IdTypeMode=2;
+        int IdTypeMode=1;
      
         public Game1()
         {
@@ -105,7 +105,7 @@ namespace LivingAndDeadSoul
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
       
             // TODO: Add your drawing code here
             spriteBatch.Begin();
