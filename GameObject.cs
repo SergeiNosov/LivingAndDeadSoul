@@ -13,6 +13,14 @@ namespace LivingAndDeadSoul
       
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         public abstract void LoadContent(Game  game, int idType);
+        public void AddPositionRight(GameTime gameTime)
+        {
+            position.X += 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+        public void AddPositionLeft(GameTime gameTime)
+        {
+            position.X -= 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
     }
   
 
