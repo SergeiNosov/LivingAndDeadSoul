@@ -49,6 +49,7 @@ namespace LivingAndDeadSoul
         {
 
             DataTypeScene type = new DataTypeScene();
+            game.Content.RootDirectory = "Content/Players";
             animationHorisontal.LoadContent(game, 0);
             animationVertical.LoadContent(game, 0);
         }
@@ -145,9 +146,23 @@ namespace LivingAndDeadSoul
 
 
             }
+            foreach (GameObject view in views)
+            {
+                //проверка объектов на взаимодействие
+                if (view.textureName == "Light") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        Console.WriteLine("Следующий уровень");
+
+                    }
 
 
-            if (AllowDown && droping)
+
+                }
+            }
+
+                if (AllowDown && droping)
                Droping(gameTime);
            
             if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight && SelectPl)

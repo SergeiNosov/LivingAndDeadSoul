@@ -33,11 +33,9 @@ namespace LivingAndDeadSoul
         {
        
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
             Content.RootDirectory = "Content/Players";
-     
-
             activeEntity.LoadContent(this);
+          
             // TODO: use this.Content to load your game content here
         }
 

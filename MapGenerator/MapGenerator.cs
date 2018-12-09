@@ -32,7 +32,11 @@ namespace LivingAndDeadSoul
                           "        ^     \n" +
                           "        ^     \n" +
                           "              \n";
-           string arrow = "              \n" +
+         
+
+
+
+            string arrow = "              \n" +
                           "              \n" +
                           "       !      \n" +
                           "              \n" +
@@ -45,11 +49,20 @@ namespace LivingAndDeadSoul
                          "              \n" +
                          "              \n" +
                          "    %         \n" +
-                         "              \n" +
+                         "   A          \n" +
                          "              \n" +
                          "              \n";
 
-            maps = new[] { InfoControll,ground, entries, stairs, arrow };
+      string ExitLvls = "        E     \n" +
+                        "              \n" +
+                        "              \n" +
+                        "              \n" +
+                        "              \n" +
+                        "              \n" +
+                        "              \n" +
+                        "              \n";
+
+            maps = new[] { ExitLvls,InfoControll, ground, entries, stairs, arrow };
             playerEnter = new Vector2(1, 6);
         }
     }
