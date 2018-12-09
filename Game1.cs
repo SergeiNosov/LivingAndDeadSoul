@@ -76,6 +76,11 @@ namespace LivingAndDeadSoul
                     levels.Remove(levels[0]);
                 }
             }
+
+            if(activeEntity.completed && activeEntity is LevelTransition) {
+                activeEntity = platformetLvl1;
+                activeEntity.completed = false;
+            }
             activeEntity.Update(gameTime);
             base.Update(gameTime);
         }
