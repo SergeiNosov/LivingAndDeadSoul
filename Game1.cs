@@ -64,23 +64,20 @@ namespace LivingAndDeadSoul
             //проверяем стукаемся ли с объектом
          
             // TODO: Add your update logic here
-            if(activeEntity.completed) {
-                if(activeEntity is Platformer) {
+           
+                if(activeEntity is Platformer && activeEntity.completed) {
                     activeEntity = levelTransition;
                     activeEntity.completed = false;
                 }
-                if(activeEntity is LevelTransition) {
+                if(activeEntity is LevelTransition && activeEntity.completed) {
 
 
                     activeEntity = levels[0];
                     levels.Remove(levels[0]);
                 }
-            }
 
-            if(activeEntity.completed && activeEntity is LevelTransition) {
-                activeEntity = platformetLvl1;
-                activeEntity.completed = false;
-            }
+
+          
             activeEntity.Update(gameTime);
             base.Update(gameTime);
         }
