@@ -8,13 +8,13 @@ namespace LivingAndDeadSoul
         public string[] maps;
         public Vector2 playerEnter;
         public MapGenerator() {
-           string ground ="              \n" +
-                          "              \n" +
-                          "              \n" +
-                          "              \n" +
-                          "              \n" +
-                          "              \n" + 
-                          "             F\n" +
+           string ground ="<            >\n" +
+                          "<            >\n" +
+                          "<            >\n" +
+                          "<            >\n" +
+                          "<            >\n" +
+                          "<            >\n" + 
+                          "<            >\n" +
                           "##############\n";
          string entries = "              \n" +
                           "              \n" +

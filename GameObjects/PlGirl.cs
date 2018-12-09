@@ -184,6 +184,26 @@ namespace LivingAndDeadSoul
 
 
                 }
+
+                if (view.textureName == "ColliderLeft") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        AllowLeft = false;
+
+                    }
+
+                }
+                if (view.textureName == "ColliderRight") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        AllowRight = false;
+
+                    }
+
+                }
+
             }
 
                 if (AllowDown && droping)
