@@ -33,6 +33,7 @@ namespace LivingAndDeadSoul
             else if(lvl==1) {
                 playerEnter = mapGenerater2.playerEnter;
             }
+        
             
 
 
