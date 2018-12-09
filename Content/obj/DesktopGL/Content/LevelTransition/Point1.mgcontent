@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/Temp/LivingAndDeadSoul/Content/Shelter/ColliderRight.png</SourceFile>
-  <SourceTime>2018-12-09T06:01:45.0965782+03:00</SourceTime>
-  <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Shelter/ColliderRight.xnb</DestFile>
-  <DestTime>2018-12-09T06:53:21.4529439+03:00</DestTime>
+  <SourceFile>E:/Temp/LivingAndDeadSoul/Content/LevelTransition/Point1.png</SourceFile>
+  <SourceTime>2018-12-09T06:22:38.594636+03:00</SourceTime>
+  <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Content/LevelTransition/Point1.xnb</DestFile>
+  <DestTime>2018-12-09T06:43:17.8084952+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-08-05T14:17:44+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

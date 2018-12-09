@@ -135,12 +135,6 @@ namespace LivingAndDeadSoul
                                 }
                             }
                         }
-
-
-
-
-
-
                     }
 
                 }
