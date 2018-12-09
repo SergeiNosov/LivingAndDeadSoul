@@ -6,7 +6,7 @@ namespace LivingAndDeadSoul
 {
     abstract public class GameEntity
     {
-        public GraphicsDeviceManager graphics;
+        public bool completed { get; set; }
         public abstract void LoadContent(Game game);
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
         public abstract void Update(GameTime gameTime);

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOff.png</SourceFile>
-  <SourceTime>2018-12-09T00:38:59.95942+03:00</SourceTime>
-  <DestFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Shelter/HintEOff.xnb</DestFile>
-  <DestTime>2018-12-09T04:06:23.478262+03:00</DestTime>
+  <SourceFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGhost/GhostFly1.png</SourceFile>
+  <SourceTime>2018-12-09T03:22:46.897729+03:00</SourceTime>
+  <DestFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Players/PlayerGhost/GhostFly1.xnb</DestFile>
+  <DestTime>2018-12-09T04:15:54.026697+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-08-05T16:49:54+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

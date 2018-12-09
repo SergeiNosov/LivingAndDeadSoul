@@ -243,7 +243,7 @@ namespace LivingAndDeadSoul
 
             }
 
-                if (AllowDown && droping)
+            if (AllowDown && droping)
                Droping(gameTime);
            
             if (Keyboard.GetState().IsKeyDown(Keys.D) && AllowRight && SelectPl)
