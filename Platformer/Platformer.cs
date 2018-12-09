@@ -20,12 +20,14 @@ namespace LivingAndDeadSoul
         bool LimitQ;
         MapGenerator2 mapGenerater2;
         MapGenerator mapGenerater;
+        MapGenerator3 mapGenerater3;
         public GraphicsDeviceManager graphics;
         public Platformer(int lvlval = 0)
         {
             this.lvl = lvlval;
             mapGenerater = new MapGenerator();
             mapGenerater2 = new MapGenerator2();
+            mapGenerater3 = new MapGenerator3();
             Vector2 playerEnter = new Vector2(0,0);
             if(lvl == 0) {
                 playerEnter = mapGenerater.playerEnter;
@@ -33,7 +35,11 @@ namespace LivingAndDeadSoul
             else if(lvl==1) {
                 playerEnter = mapGenerater2.playerEnter;
             }
-            
+            else if (lvl == 2)
+            {
+                playerEnter = mapGenerater3.playerEnter;
+            }
+
 
 
             PlayerGirl.textureName = "PlayerGirl";
@@ -58,6 +64,15 @@ namespace LivingAndDeadSoul
             if(lvl==1)
             {
                 foreach (string map in mapGenerater2.maps)
+                {
+                    MapView mapView = new MapView(map);
+                    mapView.InitMap();
+                    views.AddRange(mapView.MapObjects);
+                }
+            } 
+            if(lvl==2)
+            {
+                foreach (string map in mapGenerater3.maps)
                 {
                     MapView mapView = new MapView(map);
                     mapView.InitMap();
