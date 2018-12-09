@@ -99,6 +99,11 @@ namespace LivingAndDeadSoul
                 mapGenerater2.backgroundLose = game.Content.Load<Texture2D>("BackLvl1Lose");
                 mapGenerater2.backgroundHappy = game.Content.Load<Texture2D>("BackLvl1Happy");
             }
+            if (lvl == 2)
+            {
+              
+                mapGenerater3.backgroundHappy = game.Content.Load<Texture2D>("BackLvl3Happy");
+            }
         }
      
         public override void Update(GameTime gameTime)
@@ -156,6 +161,20 @@ namespace LivingAndDeadSoul
             {
                 spriteBatch.Draw(
                     mapGenerater2.backgroundHappy,
+                new Vector2(0, 0),
+                new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
+                Color.White,
+                0f,
+                new Vector2(0, 0),
+                Vector2.One,
+                SpriteEffects.None,
+                0f
+                );
+            }
+            if(lvl==2 && backNumber==1)
+            {
+                spriteBatch.Draw(
+                    mapGenerater3.backgroundHappy,
                 new Vector2(0, 0),
                 new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
                 Color.White,
