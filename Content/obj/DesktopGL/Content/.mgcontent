@@ -23,6 +23,7 @@
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/BackLvl1Happy.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/BackLvl1Lose.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/BackLvl3Happy.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ButtonOff.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ButtonOn.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ColliderLeft.png</File>
@@ -36,6 +37,7 @@
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

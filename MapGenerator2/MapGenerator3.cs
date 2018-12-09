@@ -12,20 +12,19 @@ namespace LivingAndDeadSoul
         public Texture2D backgroundLose;
         public Texture2D backgroundHappy;
         public MapGenerator3()
-        {
-            string ground = "<             >\n" +
+        { string ground = "<              >\n" +
                           "<              >\n" +
+                          "###########    >\n" +
                           "<              >\n" +
+                          "###########    >\n" +
                           "<              >\n" +
-                          "<              >\n" +
-                          "<              >\n" +
-                           "####CC####CC#\n";
+                          "########## ###\n";
             string entries = "              \n" +
                              "              \n" +
                              "              \n" +
+                             "<              \n" +
                              "              \n" +
-                             "              \n" +
-                             "              \n" +
+                             "<              \n" +
                              "S            F\n" +
                              "              \n";
             string stairs = "           ^     ^\n" +
@@ -34,8 +33,8 @@ namespace LivingAndDeadSoul
                             "           ^  \n" +
                             "           ^  \n" +
                             "           ^  \n" +
-                            "              \n" +
-                            "              \n";
+                            "          ^   \n" +
+                            "          ^   \n";
 
 
 
@@ -67,7 +66,7 @@ namespace LivingAndDeadSoul
                               "              \n";
 
             maps = new[] { ExitLvls, InfoControll, ground, entries, stairs, arrow };
-            playerEnter = new Vector2(1, 3);
+            playerEnter = new Vector2(1, 5);
         }
 
     }
