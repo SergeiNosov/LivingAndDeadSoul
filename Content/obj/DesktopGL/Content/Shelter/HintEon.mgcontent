@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEon.png</SourceFile>
+  <SourceFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOn.png</SourceFile>
   <SourceTime>2018-12-09T00:38:59.959552+03:00</SourceTime>
-  <DestFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Shelter/HintEon.xnb</DestFile>
-  <DestTime>2018-12-09T03:23:00.992744+03:00</DestTime>
+  <DestFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/bin/DesktopGL/Content/Shelter/HintEOn.xnb</DestFile>
+  <DestTime>2018-12-09T04:06:23.49756+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-08-05T16:49:54+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

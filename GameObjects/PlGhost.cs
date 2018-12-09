@@ -116,6 +116,8 @@ namespace LivingAndDeadSoul.GameObjects
         {
             animationStand.Update(gameTime);
             animationMove.Update(gameTime);
+            bool AllowLeft=true;
+            bool AllowRight=true;
             if (SelectPl)
             {
 
@@ -145,6 +147,28 @@ namespace LivingAndDeadSoul.GameObjects
 
                     }
 
+
+
+                    if (view.textureName == "ColliderLeft") //выход из уровня
+                    {
+                        if (view.destinationRectangle.Intersects(destinationRectangle))
+                        {
+                            AllowLeft = false;
+
+                        }
+
+                    }
+                    if (view.textureName == "ColliderRight") //выход из уровня
+                    {
+                        if (view.destinationRectangle.Intersects(destinationRectangle))
+                        {
+                            AllowRight = false;
+
+                        }
+
+                    }
+
+
                 }
 
 
@@ -155,13 +179,13 @@ namespace LivingAndDeadSoul.GameObjects
 
 
 
-                    if (Keyboard.GetState().IsKeyDown(Keys.D))
+                if (Keyboard.GetState().IsKeyDown(Keys.D)&&AllowRight)
                 {
                     AddPositionRight(gameTime);
                     moveRight = true;
                     move = true;
                 }
-                else if (Keyboard.GetState().IsKeyDown(Keys.A))
+                else if (Keyboard.GetState().IsKeyDown(Keys.A)&&AllowLeft)
                 {
                     AddPositionLeft(gameTime);
                     moveRight = false;
