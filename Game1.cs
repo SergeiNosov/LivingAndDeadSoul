@@ -14,9 +14,15 @@ namespace LivingAndDeadSoul
         GameEntity activeEntity;
         Platformer platformer = new Platformer(0);
         Platformer platformetLvl1 = new Platformer(1);
+        Platformer platformetLvl2 = new Platformer(2);
+
+        List<Platformer> levels = new List<Platformer>();
         LevelTransition levelTransition = new LevelTransition(); 
         public Game1()
         {
+         
+            levels.Add(platformetLvl1);
+            levels.Add(platformetLvl2);
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
@@ -24,6 +30,7 @@ namespace LivingAndDeadSoul
             levelTransition.graphics = graphics;
             platformer.graphics = graphics;
             platformetLvl1.graphics = graphics;
+            platformetLvl2.graphics = graphics;
         }
 
         protected override void Initialize()
@@ -43,6 +50,7 @@ namespace LivingAndDeadSoul
             Content.RootDirectory = "Content/Players";
             platformer.LoadContent(this);
             platformetLvl1.LoadContent(this);
+            platformetLvl2.LoadContent(this);
             levelTransition.LoadContent(this);
           
             // TODO: use this.Content to load your game content here
@@ -56,15 +64,20 @@ namespace LivingAndDeadSoul
             //проверяем стукаемся ли с объектом
          
             // TODO: Add your update logic here
-            if(activeEntity.completed &&activeEntity is Platformer ) {
-                activeEntity = levelTransition;
-                activeEntity.completed = false;
-            }
+           
+                if(activeEntity is Platformer && activeEntity.completed) {
+                    activeEntity = levelTransition;
+                    activeEntity.completed = false;
+                }
+                if(activeEntity is LevelTransition && activeEntity.completed) {
 
-            if(activeEntity.completed && activeEntity is LevelTransition) {
-                activeEntity = platformetLvl1;
-                activeEntity.completed = false;
-            }
+
+                    activeEntity = levels[0];
+                    levels.Remove(levels[0]);
+                }
+
+
+          
             activeEntity.Update(gameTime);
             base.Update(gameTime);
         }
