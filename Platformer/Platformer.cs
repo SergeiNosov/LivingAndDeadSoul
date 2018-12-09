@@ -39,6 +39,7 @@ namespace LivingAndDeadSoul
             var GhostEnter = playerEnter.Y;
             PlayerGhost.position = new Vector2((playerEnter.X * PlayerGhost.Size)-50, (GhostEnter * PlayerGhost.Size)-64);
 
+            PlayerGhost.platformer = this;
 
 
             if (lvl == 0)
@@ -61,7 +62,6 @@ namespace LivingAndDeadSoul
             views.Add(PlayerGhost);
             views.Add(PlayerGirl);
 
-            PlayerGhost.platformer = this;
             PlayerGirl.views = views;
             PlayerGhost.views = views;
          
@@ -72,6 +72,7 @@ namespace LivingAndDeadSoul
             {
                 view.LoadContent(game, IdTypeMode);
             }
+            Console.WriteLine("Load content");
             if (lvl == 1)
             {
              
