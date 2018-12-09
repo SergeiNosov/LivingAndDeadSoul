@@ -141,7 +141,7 @@ namespace LivingAndDeadSoul.GameObjects
                                     {
                                         if (view2.textureName == "GasIdle1")
                                         {
-                                            view2.IsCrash = false;
+                                             view2.IsCrash = false;
                                           
                                         }                                   
                                     }
@@ -183,15 +183,6 @@ namespace LivingAndDeadSoul.GameObjects
 
 
                 }
-
-
-
-
-
-
-
-
-
                 if (Keyboard.GetState().IsKeyDown(Keys.D)&&AllowRight)
                 {
                     AddPositionRight(gameTime);

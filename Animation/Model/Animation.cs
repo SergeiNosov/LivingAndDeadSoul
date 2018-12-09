@@ -9,7 +9,7 @@ namespace LivingAndDeadSoul
     public class Animation: GameObject
     {
         public Texture2D currentTexture { get; set; }
-        public string[] textureContent { get; set; }
+        private string[] textureContent { get; set; }
         public float FrameSpeed { get; set; }
         private int currentTextureIndex = 0;
         private List<Texture2D> textures = new List<Texture2D>();
@@ -49,7 +49,9 @@ namespace LivingAndDeadSoul
         public void Stop()
         {
             move = false;
-            currentTexture = textures[0];
+            if (textures.Count > 0) {
+                currentTexture = textures[0];
+            }
             timer = 0f;
         }
     }
