@@ -9,6 +9,7 @@ namespace LivingAndDeadSoul
 {
     public class Platformer: GameEntity
     {
+        
         int IdTypeMode=1;
         List<GameObject> views = new List<GameObject>();
         PlGirl PlayerGirl = new PlGirl();
@@ -17,6 +18,7 @@ namespace LivingAndDeadSoul
         bool LimitQ;
         public Platformer()
         {
+            this.completed = false;
             MapGenerator mapGenerater = new MapGenerator();
             Vector2 playerEnter = mapGenerater.playerEnter;
 
@@ -59,6 +61,11 @@ namespace LivingAndDeadSoul
             foreach(GameObject view in views)
             {
                 view.Update(gameTime);
+                if(view is ExitLvl) {
+                    if(view.destinationRectangle.Intersects(PlayerGirl.destinationRectangle)) {
+                        this.completed = true;
+                    }
+                }
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Q) && LimitQ==false)

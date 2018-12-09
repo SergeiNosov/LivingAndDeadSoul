@@ -12,29 +12,23 @@ namespace LivingAndDeadSoul
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GameEntity activeEntity;
-  
+        Platformer platformer = new Platformer();
+        LevelTransition levelTransition = new LevelTransition(); 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
-         
-
             IsMouseVisible = true;
-    
-
-
-
-
-            IsMouseVisible = true;
-
+            levelTransition.graphics = graphics;
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            activeEntity = new Platformer();
-         
+            //activeEntity = new Platformer();
+            activeEntity = platformer;
+            //activeEntity = levelTransition;
             base.Initialize();
         }
 
@@ -42,11 +36,9 @@ namespace LivingAndDeadSoul
         {
        
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-
-
             Content.RootDirectory = "Content/Players";
-            activeEntity.LoadContent(this);
+            platformer.LoadContent(this);
+            levelTransition.LoadContent(this);
           
             // TODO: use this.Content to load your game content here
         }
@@ -58,6 +50,9 @@ namespace LivingAndDeadSoul
             //проверяем стукаемся ли с объектом
          
             // TODO: Add your update logic here
+            if(activeEntity.completed) {
+                activeEntity = levelTransition;
+            }
             activeEntity.Update(gameTime);
             base.Update(gameTime);
         }
@@ -68,8 +63,6 @@ namespace LivingAndDeadSoul
            
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-
-      
             activeEntity.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
