@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace LivingAndDeadSoul
 {
@@ -43,8 +44,8 @@ namespace LivingAndDeadSoul
             }
         }
         public override void Update(GameTime gameTime) {
-            var currentMouse = Mouse.GetState();
-            if (currentMouse.LeftButton == ButtonState.Pressed) {
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
                 this.completed = true;
             }
         }
