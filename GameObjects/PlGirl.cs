@@ -21,6 +21,7 @@ namespace LivingAndDeadSoul
         private Animation animationVertical;
         public  bool SelectPl=true;
         private Animation animation;
+        bool LimitE = false;
         public PlGirl() {
           string[] texturesHorisontal = { "PlayerGirl/GirlIdle1",  "PlayerGirl/GirlRun1",  "PlayerGirl/GirlRun2",  "PlayerGirl/GirlRun3", "PlayerGirl/GirlRun4" };
           string[] texturesVertical = { "PlayerGirl/GirlClimbingStrairs1", "PlayerGirl/GirlClimbingStrairs2", "PlayerGirl/GirlClimbingStrairs1", "PlayerGirl/GirlClimbingStrairs2" };
@@ -144,6 +145,64 @@ namespace LivingAndDeadSoul
 
                 }
 
+
+            }
+            foreach (GameObject view in views)
+            {
+                //проверка объектов на взаимодействие
+                if (view.textureName == "Light") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        Console.WriteLine("Следующий уровень");
+
+                    }
+
+
+
+                }
+
+
+                if (view.textureName == "ButtonOn" && SelectPl) //проверка кнопки
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        if(Keyboard.GetState().IsKeyDown(Keys.E) && LimitE == false)
+                        {
+                            LimitE = true;
+                            // тут писать включени и выключение инструкции по смене игроков
+                            Console.WriteLine("Кликнулось от девочки");
+
+
+                        }else if(!Keyboard.GetState().IsKeyDown(Keys.E) && LimitE)
+                        {
+                            LimitE = false;
+                        }
+
+                    }
+
+
+
+                }
+
+                if (view.textureName == "ColliderLeft") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        AllowLeft = false;
+
+                    }
+
+                }
+                if (view.textureName == "ColliderRight") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {
+                        AllowRight = false;
+
+                    }
+
+                }
 
             }
 

@@ -99,6 +99,36 @@ namespace LivingAndDeadSoul
 
                             }
                             break;
+                        case 'B':
+                            { //Controll info
+                                ActionBox actionBox = new ActionBox();
+
+                                actionBox.textureName = "ButtonOn";
+                                actionBox.position = new Vector2(j * actionBox.Size, i * actionBox.Size);
+                                MapObjects.Add(actionBox);
+
+                            }
+                            break;
+                        case '>':
+                            { //Controll info
+                                ColliderRight colliderRight = new ColliderRight();
+
+                                colliderRight.textureName = "ColliderRight";
+                                colliderRight.position = new Vector2(j * colliderRight.Size, i * colliderRight.Size);
+                                MapObjects.Add(colliderRight);
+
+                            }
+                            break;
+                        case '<':
+                            { //Controll info
+                                ColliderLeft colliderLeft = new ColliderLeft();
+
+                                colliderLeft.textureName = "ColliderLeft";
+                                colliderLeft.position = new Vector2(j * colliderLeft.Size, i * colliderLeft.Size);
+                                MapObjects.Add(colliderLeft);
+
+                            }
+                            break;
 
 
                     }

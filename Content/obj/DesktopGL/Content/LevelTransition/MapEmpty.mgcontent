@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>E:/Temp/LivingAndDeadSoul/Content/LevelTransition/MapEmpty.png</SourceFile>
-  <SourceTime>2018-12-09T04:20:26.3801496+03:00</SourceTime>
+  <SourceTime>2018-12-09T06:01:16.3361498+03:00</SourceTime>
   <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Content/LevelTransition/MapEmpty.xnb</DestFile>
-  <DestTime>2018-12-09T04:31:27.1072164+03:00</DestTime>
+  <DestTime>2018-12-09T06:05:35.9728758+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-08-05T14:17:44+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
