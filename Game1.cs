@@ -12,7 +12,8 @@ namespace LivingAndDeadSoul
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         GameEntity activeEntity;
-        Platformer platformer = new Platformer();
+        Platformer platformer = new Platformer(0);
+        Platformer platformetLvl1 = new Platformer(1);
         LevelTransition levelTransition = new LevelTransition(); 
         public Game1()
         {
@@ -21,14 +22,17 @@ namespace LivingAndDeadSoul
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             levelTransition.graphics = graphics;
+            platformer.graphics = graphics;
+            platformetLvl1.graphics = graphics;
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
             //activeEntity = new Platformer();
-            //activeEntity = platformer;
-            activeEntity = levelTransition;
+            activeEntity = platformer;
+            //activeEntity = levelTransition;
+            
             base.Initialize();
         }
 
@@ -38,6 +42,7 @@ namespace LivingAndDeadSoul
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Content.RootDirectory = "Content/Players";
             platformer.LoadContent(this);
+            platformetLvl1.LoadContent(this);
             levelTransition.LoadContent(this);
           
             // TODO: use this.Content to load your game content here
@@ -47,11 +52,17 @@ namespace LivingAndDeadSoul
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
             //проверяем стукаемся ли с объектом
          
             // TODO: Add your update logic here
             if(activeEntity.completed) {
-                activeEntity = levelTransition;
+                if(activeEntity is Platformer) {
+                    activeEntity = levelTransition;
+                }
+                if(activeEntity is LevelTransition) {
+                    activeEntity = platformetLvl1;
+                }
             }
             activeEntity.Update(gameTime);
             base.Update(gameTime);

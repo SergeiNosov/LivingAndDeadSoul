@@ -37,7 +37,7 @@
 /processorParam:TextureFormat=Color
 /build:LevelTransition/MapEmpty.png
 
-#begin LevelTransition/Point1.png
+#begin Players/GhostIdle1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,19 +47,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:LevelTransition/Point1.png
-
-#begin LevelTransition/Point2.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:LevelTransition/Point2.png
+/build:Players/GhostIdle1.png
 
 #begin Players/PlayerGhost/GhostFly1.png
 /importer:TextureImporter
@@ -205,6 +193,18 @@
 /processorParam:TextureFormat=Color
 /build:Players/PlayerGirl/GirlRun4.png
 
+#begin Players/PlayerGirl/GirlSpriteRun.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Players/PlayerGirl/GirlSpriteRun.png
+
 #begin Shelter/ArrowTop.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -216,6 +216,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Shelter/ArrowTop.png
+
+#begin Shelter/BackLvl1Happy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shelter/BackLvl1Happy.png
+
+#begin Shelter/BackLvl1Lose.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shelter/BackLvl1Lose.png
 
 #begin Shelter/ButtonOff.png
 /importer:TextureImporter
@@ -265,6 +289,18 @@
 /processorParam:TextureFormat=Color
 /build:Shelter/ColliderRight.png
 
+#begin Shelter/GasIdle1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shelter/GasIdle1.png
+
 #begin Shelter/ground.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -289,7 +325,7 @@
 /processorParam:TextureFormat=Color
 /build:Shelter/Hint2.png
 
-#begin Shelter/HintEon.png
+#begin Shelter/HintEOff.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -299,7 +335,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Shelter/HintEon.png
+/build:Shelter/HintEOff.png
+
+#begin Shelter/HintEOn.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shelter/HintEOn.png
 
 #begin Shelter/Light.png
 /importer:TextureImporter

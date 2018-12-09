@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/Temp/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun1.png</SourceFile>
-  <SourceTime>2018-12-09T01:18:04.3743123+03:00</SourceTime>
-  <DestFile>E:/Temp/LivingAndDeadSoul/Content/bin/DesktopGL/Players/PlayerGirl/GirlRun1.xnb</DestFile>
-  <DestTime>2018-12-09T06:43:07.584662+03:00</DestTime>
+  <SourceFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun1.png</SourceFile>
+  <SourceTime>2018-12-09T00:39:06.154864+03:00</SourceTime>
+  <DestFile>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/bin/DesktopGL/Players/PlayerGirl/GirlRun1.xnb</DestFile>
+  <DestTime>2018-12-09T07:53:27.853494+03:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-09-24T00:55:52+03:00</ImporterTime>
+  <ImporterTime>2018-09-24T00:56:40+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-09-24T00:55:52+03:00</ProcessorTime>
+  <ProcessorTime>2018-09-24T00:56:40+03:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

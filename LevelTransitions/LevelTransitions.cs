@@ -42,6 +42,11 @@ namespace LivingAndDeadSoul
                 spriteBatch.Draw(this.point2Texture, point, Color.White);
             }
         }
-        public override void Update(GameTime gameTime) {}
+        public override void Update(GameTime gameTime) {
+            var currentMouse = Mouse.GetState();
+            if (currentMouse.LeftButton == ButtonState.Pressed) {
+                this.completed = true;
+            }
+        }
     }
 }

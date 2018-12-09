@@ -17,8 +17,10 @@ namespace LivingAndDeadSoul.GameObjects
         public bool moveRight = true;
         public bool move = false;
         public  bool SelectPl=false;
+        public Game gameData;
         private Animation animationStand;
         private Animation animationMove;
+        public Platformer platformer;
         bool LimitE = false;
         public PlGhost() {
               string[] texturesStand = { "PlayerGhost/GhostIdle1", "PlayerGhost/GhostIdle2", "PlayerGhost/GhostIdle1", "PlayerGhost/GhostIdle2" };
@@ -133,7 +135,18 @@ namespace LivingAndDeadSoul.GameObjects
                                 LimitE = true;
                                 // тут писать включени и выключение инструкции по смене игроков
                                 Console.WriteLine("Кликнулось от Ghost");
-
+                                if(platformer.lvl==1 && platformer.backNumber==1)
+                                {
+                                    foreach(GameObject view2 in views)
+                                    {
+                                        if (view2.textureName == "GasIdle1")
+                                        {
+                                             view2.IsCrash = false;
+                                          
+                                        }                                   
+                                    }
+                                    platformer.backNumber = 2;
+                                }
 
                             }
                             else if (!Keyboard.GetState().IsKeyDown(Keys.E) && LimitE)
@@ -170,15 +183,6 @@ namespace LivingAndDeadSoul.GameObjects
 
 
                 }
-
-
-
-
-
-
-
-
-
                 if (Keyboard.GetState().IsKeyDown(Keys.D)&&AllowRight)
                 {
                     AddPositionRight(gameTime);
