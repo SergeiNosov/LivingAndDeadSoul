@@ -21,13 +21,14 @@ namespace LivingAndDeadSoul
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             levelTransition.graphics = graphics;
+            platformer.graphics = graphics;
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            activeEntity = new Platformer();
-            platformer.graphics = graphics;
+            activeEntity = platformer;
+            
             base.Initialize();
         }
 

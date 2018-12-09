@@ -117,7 +117,7 @@ namespace LivingAndDeadSoul
                                         }else {
                                             //тут дестрой
                                         }
-                                    }else AllowDown = false;
+                                    } else AllowDown = false;
 
                                 }
                             }
