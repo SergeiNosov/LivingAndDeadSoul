@@ -79,6 +79,26 @@ namespace LivingAndDeadSoul
 
                             }
                             break;
+                             case 'E':
+                            { //Controll info
+                                ExitLvl exitLvl = new ExitLvl();
+
+                                exitLvl.textureName = "Light";
+                                exitLvl.position = new Vector2(j * exitLvl.Size, i * exitLvl.Size);
+                                MapObjects.Add(exitLvl);
+
+                            }
+                            break;
+                        case 'A':
+                            { //Controll info
+                                ActionInfo ActionInfo = new ActionInfo();
+
+                                ActionInfo.textureName = "HintEon";
+                                ActionInfo.position = new Vector2(j * ActionInfo.Size, i * ActionInfo.Size);
+                                MapObjects.Add(ActionInfo);
+
+                            }
+                            break;
 
 
                     }

@@ -28,8 +28,9 @@ namespace LivingAndDeadSoul.GameObjects
         
         public override void LoadContent(Game game, int idType)
         {
-
             DataTypeScene type = new DataTypeScene();
+            // animation.LoadContent(game, 0);
+            game.Content.RootDirectory = "Content/Players";
             animationStand.LoadContent(game, 0);
             animationStand.FrameSpeed = 0.6f;
             animationMove.LoadContent(game, 0);
@@ -55,9 +56,9 @@ namespace LivingAndDeadSoul.GameObjects
 
         }
 
+
         public void AddPositionRight(GameTime gameTime)
         {
-
             position.X += 100 * (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
         public void AddPositionLeft(GameTime gameTime)
