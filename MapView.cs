@@ -99,6 +99,16 @@ namespace LivingAndDeadSoul
 
                             }
                             break;
+                        case 'B':
+                            { //Controll info
+                                ActionBox actionBox = new ActionBox();
+
+                                actionBox.textureName = "ButtonOn";
+                                actionBox.position = new Vector2(j * actionBox.Size, i * actionBox.Size);
+                                MapObjects.Add(actionBox);
+
+                            }
+                            break;
 
 
                     }

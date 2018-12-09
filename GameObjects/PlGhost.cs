@@ -19,6 +19,7 @@ namespace LivingAndDeadSoul.GameObjects
         public  bool SelectPl=false;
         private Animation animationStand;
         private Animation animationMove;
+        bool LimitE = false;
         public PlGhost() {
               string[] texturesStand = { "PlayerGhost/GhostIdle1", "PlayerGhost/GhostIdle2", "PlayerGhost/GhostIdle1", "PlayerGhost/GhostIdle2" };
               string[] texturesMove = { "PlayerGhost/GhostIdle1", "PlayerGhost/GhostFly1",  "PlayerGhost/GhostFly2" };
@@ -117,7 +118,44 @@ namespace LivingAndDeadSoul.GameObjects
             animationMove.Update(gameTime);
             if (SelectPl)
             {
-                if (Keyboard.GetState().IsKeyDown(Keys.D))
+
+
+                foreach (GameObject view in views)//проверка объектов
+                {
+                    if (view.textureName == "ButtonOn" && SelectPl) //проверка кнопки
+                    {
+                        if (view.destinationRectangle.Intersects(destinationRectangle))
+                        {
+                            if (Keyboard.GetState().IsKeyDown(Keys.E) && LimitE == false)
+                            {
+                                LimitE = true;
+                                // тут писать включени и выключение инструкции по смене игроков
+                                Console.WriteLine("Кликнулось от Ghost");
+
+
+                            }
+                            else if (!Keyboard.GetState().IsKeyDown(Keys.E) && LimitE)
+                            {
+                                LimitE = false;
+                            }
+
+                        }
+
+
+
+                    }
+
+                }
+
+
+
+
+
+
+
+
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.D))
                 {
                     AddPositionRight(gameTime);
                     moveRight = true;

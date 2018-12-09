@@ -50,7 +50,7 @@ namespace LivingAndDeadSoul
                          "              \n" +
                          "    %         \n" +
                          "   A          \n" +
-                         "              \n" +
+                         "   B          \n" +
                          "              \n";
 
       string ExitLvls = "        E     \n" +
