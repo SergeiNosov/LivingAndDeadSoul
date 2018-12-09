@@ -28,9 +28,9 @@ namespace LivingAndDeadSoul
             var GhostEnter = playerEnter.Y;
             PlayerGhost.position = new Vector2((playerEnter.X * PlayerGhost.Size)-50, (GhostEnter * PlayerGhost.Size)-64);
 
-          
 
 
+       
             foreach (string map in mapGenerater.maps)
             {
                 MapView mapView = new MapView(map);
@@ -39,6 +39,7 @@ namespace LivingAndDeadSoul
             }
             views.Add(PlayerGhost);
             views.Add(PlayerGirl);
+
 
             PlayerGirl.views = views;
             PlayerGhost.views = views;
@@ -83,10 +84,12 @@ namespace LivingAndDeadSoul
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+         
             foreach (GameObject view in views)
             {
                 view.Draw(gameTime, spriteBatch);
             }
+           
         }
     }
 }
