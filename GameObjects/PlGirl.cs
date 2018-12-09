@@ -159,12 +159,6 @@ namespace LivingAndDeadSoul
                                 }
                             }
                         }
-
-
-
-
-
-
                     }
 
                 }

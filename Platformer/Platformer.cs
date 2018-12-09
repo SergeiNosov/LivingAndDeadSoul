@@ -15,21 +15,25 @@ namespace LivingAndDeadSoul
         PlGirl PlayerGirl = new PlGirl();
         PlGhost PlayerGhost = new PlGhost();
         int PlayerType = 1; //1 - Girl, 2- Ghost
-        public int lvl = 1;
+        public int lvl = 0;
         public int backNumber = 1;
         bool LimitQ;
         MapGenerator2 mapGenerater2;
         MapGenerator mapGenerater;
         public GraphicsDeviceManager graphics;
-        public Platformer()
+        public Platformer(int lvlval = 0)
         {
+            this.lvl = lvlval;
             mapGenerater = new MapGenerator();
-             mapGenerater2 = new MapGenerator2();
+            mapGenerater2 = new MapGenerator2();
             Vector2 playerEnter = new Vector2(0,0);
-         if(lvl == 0)
-             playerEnter = mapGenerater.playerEnter;
-            if(lvl==1)
+            if(lvl == 0) {
+                playerEnter = mapGenerater.playerEnter;
+            }
+            else if(lvl==1) {
                 playerEnter = mapGenerater2.playerEnter;
+            }
+            
 
 
             PlayerGirl.textureName = "PlayerGirl";
@@ -50,7 +54,8 @@ namespace LivingAndDeadSoul
                     mapView.InitMap();
                     views.AddRange(mapView.MapObjects);
                 }
-            }if(lvl==1)
+            }
+            if(lvl==1)
             {
                 foreach (string map in mapGenerater2.maps)
                 {
@@ -73,14 +78,12 @@ namespace LivingAndDeadSoul
                 view.LoadContent(game, IdTypeMode);
             }
             Console.WriteLine("Load content");
-            if (lvl == 1)
-            {
-             
-                game.Content.RootDirectory = "Content/Shelter";
+            
+            game.Content.RootDirectory = "Content/Shelter";
+            if(lvl == 1) {
                 mapGenerater2.backgroundLose = game.Content.Load<Texture2D>("BackLvl1Lose");
                 mapGenerater2.backgroundHappy = game.Content.Load<Texture2D>("BackLvl1Happy");
             }
-
         }
      
         public override void Update(GameTime gameTime)
@@ -124,29 +127,29 @@ namespace LivingAndDeadSoul
             {
                 spriteBatch.Draw(
                     mapGenerater2.backgroundLose,
-     new Vector2(0, 0),
-     new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
-     Color.White,
-     0f,
-     new Vector2(0, 0),
-     Vector2.One,
-     SpriteEffects.None,
-     0f
-     );
+                    new Vector2(0, 0),
+                    new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
+                    Color.White,
+                    0f,
+                    new Vector2(0, 0),
+                    Vector2.One,
+                    SpriteEffects.None,
+                    0f
+                    );
             }
             if (lvl == 1 && backNumber == 2)
             {
                 spriteBatch.Draw(
                     mapGenerater2.backgroundHappy,
-     new Vector2(0, 0),
-     new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
-     Color.White,
-     0f,
-     new Vector2(0, 0),
-     Vector2.One,
-     SpriteEffects.None,
-     0f
-     );
+                new Vector2(0, 0),
+                new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),
+                Color.White,
+                0f,
+                new Vector2(0, 0),
+                Vector2.One,
+                SpriteEffects.None,
+                0f
+                );
             }
             foreach (GameObject view in views)
             {
