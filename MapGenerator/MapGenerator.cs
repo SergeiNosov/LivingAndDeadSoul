@@ -63,7 +63,7 @@ namespace LivingAndDeadSoul
                         "              \n";
 
             maps = new[] { ExitLvls,InfoControll, ground, entries, stairs, arrow };
-            playerEnter = new Vector2(1, 6);
+            playerEnter = new Vector2(1, 5);
         }
     }
 }

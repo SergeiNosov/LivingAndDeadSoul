@@ -26,9 +26,8 @@ namespace LivingAndDeadSoul
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            //activeEntity = new Platformer();
-            activeEntity = platformer;
-            //activeEntity = levelTransition;
+            activeEntity = new Platformer();
+            platformer.graphics = graphics;
             base.Initialize();
         }
 
