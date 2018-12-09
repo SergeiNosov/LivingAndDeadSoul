@@ -23,7 +23,7 @@ namespace LivingAndDeadSoul
         public GraphicsDeviceManager graphics;
         public Platformer()
         {
-          //  mapGenerater = new MapGenerator();
+            mapGenerater = new MapGenerator();
              mapGenerater2 = new MapGenerator2();
             Vector2 playerEnter = new Vector2(0,0);
          if(lvl == 0)
