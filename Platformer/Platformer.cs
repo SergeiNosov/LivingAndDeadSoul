@@ -20,6 +20,7 @@ namespace LivingAndDeadSoul
         bool LimitQ;
         MapGenerator2 mapGenerater2;
         MapGenerator mapGenerater;
+        public GraphicsDeviceManager graphics;
         public Platformer()
         {
           //  mapGenerater = new MapGenerator();
