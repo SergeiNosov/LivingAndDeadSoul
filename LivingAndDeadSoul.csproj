@@ -15,12 +15,18 @@
   <ItemGroup>
     <Folder Include="GameObjects\" />
     <Folder Include="HelperClass\" />
+    <Folder Include="MapGenerator2\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="GameObjects\EmptyClass.cs" />
     <Compile Remove="Platformer\Player.cs" />
+    <Compile Remove="MapGenerator\Lvl2Generator.cs" />
+    <Compile Remove="MapGenerator\MapGenerator2.cs" />
+    <Compile Remove="Content\Shelter\Crash1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Content\background.png" />
+    <None Remove="Content\bin\DesktopGL\City\ground.xnb" />
+    <None Remove="Content\bin\DesktopGL\City\ground.xnb" />
   </ItemGroup>
 </Project>

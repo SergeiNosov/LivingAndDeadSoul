@@ -16,7 +16,7 @@ namespace LivingAndDeadSoul
        public List<GameObject> views;
         public bool moveRight = true;
         public bool moveVertical = false;
-
+   
         private Animation animationHorisontal;
         private Animation animationVertical;
         public  bool SelectPl=true;
@@ -33,7 +33,7 @@ namespace LivingAndDeadSoul
         {
             var x = Convert.ToInt32(position.X);
             var y = Convert.ToInt32(position.Y);
-            destinationRectangle = new Rectangle(x - (Width - Size), y - (Height - Size), Width, Height);
+            destinationRectangle = new Rectangle(x - (Width - Size), y - (Height - Size)+7, Width, Height);
             Texture2D texture = moveVertical ? animationVertical.currentTexture : animationHorisontal.currentTexture;
             spriteBatch.Draw(
                 texture,
@@ -105,11 +105,19 @@ namespace LivingAndDeadSoul
 
                         foreach (GameObject view2 in views)
                         {
-                            if (view2.textureName == "ground")
+                            if (view2.textureName == "ground" || view2.textureName == "GasIdle1")
                             {
                                 if (view2.destinationRectangle.Intersects(destinationRectangle))
                                 {
-                                    AllowDown = false;
+                                    if(view2.textureName == "GasIdle1")
+                                    {
+                                        if(view2.IsCrash==false)
+                                        {
+                                            AllowDown = false;
+                                        }else {
+                                            //тут дестрой
+                                        }
+                                    }else AllowDown = false;
 
                                 }
                             }
@@ -122,7 +130,7 @@ namespace LivingAndDeadSoul
                         droping = true;
                         foreach (GameObject view2 in views)
                         {
-                            if (view2.textureName == "ground")
+                            if (view2.textureName == "ground" || view2.textureName == "GasIdle1")
                             {
                                 if (!view2.destinationRectangle.Intersects(destinationRectangle))
                                 {
@@ -130,8 +138,24 @@ namespace LivingAndDeadSoul
                                 }
                                 else
                                 {
-                                    droping = false;
-                                    AllowDown = false;
+                                    if (view2.textureName == "GasIdle1")
+                                    {
+                                        if (view2.IsCrash == false)
+                                        {
+                                            droping = false;
+                                            AllowDown = false;
+                                        }
+                                        else
+                                        {
+                                            //тут дестрой
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        droping = false;
+                                        AllowDown = false;
+                                    }
                                 }
                             }
                         }
@@ -199,6 +223,19 @@ namespace LivingAndDeadSoul
                     if (view.destinationRectangle.Intersects(destinationRectangle))
                     {
                         AllowRight = false;
+
+                    }
+
+                }
+
+
+                if (view.textureName == "GasIdle1") //выход из уровня
+                {
+                    if (view.destinationRectangle.Intersects(destinationRectangle))
+                    {  
+
+                        if(view.IsCrash)
+                        Console.WriteLine("Dead");
 
                     }
 

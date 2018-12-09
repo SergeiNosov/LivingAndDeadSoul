@@ -34,7 +34,7 @@ namespace LivingAndDeadSoul
         {
             // TODO: Add your initialization logic here
             activeEntity = new Platformer();
-         
+            activeEntity.graphics = graphics;
             base.Initialize();
         }
 

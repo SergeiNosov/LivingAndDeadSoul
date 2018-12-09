@@ -129,6 +129,16 @@ namespace LivingAndDeadSoul
 
                             }
                             break;
+                        case 'C':
+                            { //gaz
+                                Crash1 gaz = new Crash1();
+
+                                gaz.textureName = "GasIdle1";
+                                gaz.position = new Vector2(j * gaz.Size, i * gaz.Size);
+                                MapObjects.Add(gaz);
+
+                            }
+                            break;
 
 
                     }

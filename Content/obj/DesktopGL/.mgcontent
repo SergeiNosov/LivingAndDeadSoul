@@ -20,10 +20,13 @@
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlRun4.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Players/PlayerGirl/GirlSpriteRun.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ArrowTop.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/BackLvl1Happy.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/BackLvl1Lose.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ButtonOff.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ButtonOn.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ColliderLeft.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ColliderRight.png</File>
+    <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/GasIdle1.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/ground.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/Hint2.png</File>
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/HintEOff.png</File>
@@ -32,6 +35,9 @@
     <File>/Users/nosovsergej/Projects/Leaving/LivingAndDeadSoul/Content/Shelter/stairs.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
